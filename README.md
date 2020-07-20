@@ -14,4 +14,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-- 🔭 I’m currently working on CloudNative | Container Paas platform, open for new start(Kubernetes Engineer,etc).
+- 🔭 I’m currently working on CloudNative | Container Paas platform
+- 👯 Open for new start(Kubernetes Engineer,etc).
