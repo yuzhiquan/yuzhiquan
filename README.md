@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 - 🔭 I’m currently working on CloudNative | Container Paas platform
-- 👯 Open for new start(Kubernetes Engineer,etc).
+- ~~👯 Open for new start(Kubernetes Engineer,etc).~~
