@@ -39,3 +39,9 @@ Here are some ideas to get you started:
 <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/>
 <img src="https://devicons.github.io/devicon/devicon.git/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/>
 </p>
+<a href="https://github.com/yuzhiquan">
+  <img align="center" height="170px" src="https://github-readme-stats.vercel.app/api?username=yuzhiquan&show_icons=true&theme=buefy" />
+</a>
+<a href="https://github.com/yuzhiquan">
+  <img align="center" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuzhiquan&layout=compact&show_icons=true&theme=buefy" />
+</a>
