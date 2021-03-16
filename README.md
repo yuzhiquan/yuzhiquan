@@ -46,3 +46,5 @@ Here are some ideas to get you started:
   <img align="center" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuzhiquan&layout=compact&show_icons=true&theme=buefy" />
 </a>
 -->
+
+<img src="https://github-profile-trophy.vercel.app/?username=yuzhiquan&theme=flat&column=7&margin-w=10" alt="logo" height="160" align="center" />
