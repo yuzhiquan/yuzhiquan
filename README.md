@@ -1,5 +1,8 @@
 ### Hi there 👋
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%F0%9F%91%8B-blue.svg)](https://www.linkedin.com/in/zhiquan-yu-7a701b97/)
+[![ghpvc](https://komarev.com/ghpvc/?username=yuzhiquan)](https://komarev.com/ghpvc/?username=yuzhiquan)
+
 <!--
 **yuzhiquan/yuzhiquan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
