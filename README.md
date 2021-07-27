@@ -48,9 +48,9 @@ Here are some ideas to get you started:
 <a href="https://github.com/yuzhiquan">
   <img align="center" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuzhiquan&layout=compact&show_icons=true&theme=buefy" />
 </a>
--->
 
 <img src="https://github-profile-trophy.vercel.app/?username=yuzhiquan&theme=flat&column=7&margin-w=10" alt="logo" height="160" align="center" />
+-->
 
 [![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/nord_bright/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
 [![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/nord_bright/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/nord_bright/2-most-commit-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
