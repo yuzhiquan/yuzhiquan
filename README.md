@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-- 🔭 I’m currently working on CloudNative | Container Paas platform
+- 🔭 I’m currently working on CloudNative | Container PaaS platform
 
 **🌈 Working with:**
 
