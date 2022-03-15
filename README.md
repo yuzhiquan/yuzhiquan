@@ -18,6 +18,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 - 🔭 I’m currently working on CloudNative | Container PaaS platform
+- 🌱 I’m open for new opportunity, such as cloud native engineer or architect
 
 **🌈 Working with:**
 
