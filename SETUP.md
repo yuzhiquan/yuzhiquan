@@ -34,9 +34,12 @@ git clone https://github.com/yuzhiquan/yuzhiquan.git
 
 # 中英文双语
 
-README 顶部有一个折叠块 `<details>`，默认收起，展开后是**中文版**（关于我 + 内容导航）。
-英文是默认展示的主体，中文版只翻译静态文案，**不重复** PR 列表和文章列表
+英文是 README 的默认主体；**只给 `## 👨‍💻 About me` 加了一个中文翻译段落**，
+放在英文列表下方的 `<details><summary>🇨🇳 中文简介 · 点击展开</summary>` 里，默认收起。
+其余区块（PR 列表、AI Infra / AI Agent / 面试准备文章列表、Tech stack）**不重复翻译**
 （文章标题本身是中文，PR 标题是英文技术描述，翻译反而难读）。
+
+之前试过在顶部放一个整页的中文折叠版，占位置且和下面英文区块重复太多，已回退成现在这个方案。
 
 GitHub 会过滤掉 README 里的所有 JS，所以做不到"点击按钮切换语言"，
 只有 `<details>` 折叠和锚点跳转两种原生能力。
@@ -44,7 +47,7 @@ GitHub 会过滤掉 README 里的所有 JS，所以做不到"点击按钮切换�
 两个实测出来的限制：
 
 - **`<details>` 里的 Markdown 表格不会被渲染**（GFM 表格扩展在 HTML 块内不生效），
-  段落、标题、列表、`<sub>` 都正常。所以中文版导航用的是列表而不是表格。
+  段落、标题、列表、`<sub>` 都正常。折叠区里要展示结构化内容就用列表。
 - 锚点方案里 `<a id="zh">` 会被渲染成 `id="user-content-zh"`（GitHub 的 sanitizer 加前缀），
   所以链接要写 `#user-content-zh` 而不是 `#zh`。中文标题自动生成的 anchor 在渲染管线里不可靠，别依赖。
 
