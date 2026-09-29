@@ -44,11 +44,11 @@
 ## 🚀 Recent commits
 
 <!--START_SECTION:commits-->
+- [`3f62c04`](https://github.com/yuzhiquan/yuzhiquan/commit/3f62c0431201fbd0de152b644818b80d9962ebde) feat: self-hosted stat cards (stats/top-langs/contribution graph as loca... · `yuzhiquan/yuzhiquan`
 - [`1cd1dd6`](https://github.com/yuzhiquan/yuzhiquan/commit/1cd1dd637c28bbabdbfe10062a9ccd8cf8ff51e2) docs: add zhihu and linkedin profile links, annotate articles.yml · `yuzhiquan/yuzhiquan`
 - [`6c9a4c2`](https://github.com/yuzhiquan/yuzhiquan/commit/6c9a4c2a726b4faed8ef7a9ac901d4fff46184b8) feat: writing section from articles.yml (zhihu/linkedin friendly) · `yuzhiquan/yuzhiquan`
 - [`8f6181d`](https://github.com/yuzhiquan/yuzhiquan/commit/8f6181da5a2e55491053fd27245eb6486d92170e) feat: add scheduled workflow to refresh recent commits, PRs and posts · `yuzhiquan/yuzhiquan`
 - [`f01afb9`](https://github.com/kubernetes-sigs/agent-sandbox/commit/f01afb95fd1fcd6c03507fded29f420fc3c1a406) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox`
-- [`10a7f4e`](https://github.com/kubernetes-sigs/agent-sandbox/commit/10a7f4ebe08892a2c2e66c7047e1a9bb601dc040) feat(clients/ts): support automatic sandbox expiration (#1605) · `kubernetes-sigs/agent-sandbox`
 <!--END_SECTION:commits-->
 
 ## 🔀 Recent pull requests
@@ -71,7 +71,7 @@
 - [CAS5.x编译、部署(3)-登录页定制](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin3/) · 2019-01-21 · `Blog`
 <!--END_SECTION:writing-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:43 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:49 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
