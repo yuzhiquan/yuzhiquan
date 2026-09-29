@@ -1,26 +1,21 @@
-# 部署步骤（3 步）
+# 部署步骤
 
-## 1. 建仓库
+仓库 `yuzhiquan/yuzhiquan` 已存在（public，默认分支 **master**），README 会自动显示在主页。
 
-在 GitHub 新建公开仓库，仓库名必须**与用户名完全一致**：`yuzhiquan/yuzhiquan`。
-README 只有放在这个同名仓库里才会显示在主页。
-
-## 2. 上传文件
-
-```bash
-cd github-profile
-git init -b main
-git remote add origin git@github.com:yuzhiquan/yuzhiquan.git
-git add .
-git commit -m "feat: init profile readme"
-git push -u origin main
-```
-
-## 3. 开启 Actions 写权限
+## 1. 开启 Actions 写权限
 
 Settings → Actions → General → Workflow permissions → 选 **Read and write permissions** → Save。
 
-然后到 Actions 页手动 Run workflow 一次，30 秒后 README 的动态区块就会被真实数据填充。之后每 30 分钟自动刷新。
+## 2. 手动触发一次
+
+到 Actions 页 → Update profile README → Run workflow，约 30 秒后 README 的动态区块就会被真实数据填充。之后每 30 分钟自动刷新。
+
+## 3. 本机继续改
+
+```bash
+git clone https://github.com/yuzhiquan/yuzhiquan.git
+# 改完 git add / commit / push，分支是 master 不是 main
+```
 
 ---
 

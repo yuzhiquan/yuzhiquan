@@ -1,0 +1,60 @@
+name: Update profile README
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"      # 每 30 分钟刷新最近动态（UTC 时区）
+    - cron: "23 4 1 * *"        # 每月 1 号空提交，防止 GitHub 停用定时任务
+  workflow_dispatch:            # 允许在 Actions 页面手动点一次
+  push:
+    branches: [master]
+    paths: [".github/scripts/gen_activity.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate activity sections
+        run: python .github/scripts/gen_activity.py
+        env:
+          GH_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BLOG_FEED: "https://yuzhiquan.github.io/atom.xml"
+          BLOG_SITE: "https://yuzhiquan.github.io"
+          SKIP_PATTERNS: "Add files via upload,Initial commit"
+          MAX_COMMITS: "5"
+          MAX_PRS: "5"
+          MAX_POSTS: "5"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "no change"
+          else
+            git add README.md
+            git commit -m "chore: update recent activity"
+            git pull --rebase --autostash origin master
+            git push
+          fi
+
+  keepalive:
+    if: github.event.schedule == '23 4 1 * *'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Empty commit to keep schedule alive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: keepalive"
+          git push
