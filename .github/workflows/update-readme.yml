@@ -36,7 +36,7 @@ jobs:
           MAX_COMMITS: "5"
           MAX_PRS: "5"
           MAX_POSTS: "5"
-          MAX_WRITING: "6"
+          MAX_VISIBLE: "6"                    # 每个精选区块默认展示的条数，其余折叠
           ARTICLES_FILE: "data/articles.yml"
 
       - name: Generate stat cards (local SVG)

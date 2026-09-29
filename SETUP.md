@@ -25,10 +25,39 @@ git clone https://github.com/yuzhiquan/yuzhiquan.git
 | --- | --- |
 | `README.md` | 主页内容，4 个动态区块用占位符注释包裹 |
 | `.github/workflows/update-readme.yml` | 定时任务：跑脚本 → 提交；另含每月空提交保活 |
+| `.github/workflows/refresh-articles.yml` | **手动触发**：扫源仓库（含私有仓）把新文章补进 `articles.yml` |
 | `.github/scripts/gen_activity.py` | 拉数据 + 替换占位符，纯标准库无依赖 |
 | `.github/scripts/gen_stats.py` | 生成 `assets/` 下三张统计 SVG，纯标准库无依赖 |
+| `.github/scripts/refresh_articles.py` | 扫描源仓库生成 `articles.yml`（需要 PAT 才能读私有仓） |
 | `assets/*.svg` | 统计卡片 / 语言分布 / 贡献热力图，由 workflow 重新生成并提交 |
-| `data/articles.yml` | 跨平台文章源（知乎、LinkedIn、公众号等手动维护） |
+| `data/articles.yml` | 三大精选区块（AI Infra / AI Agent / 面试准备）的文章源 |
+
+# 三大精选区块
+
+README 里 `## 🧠 AI Infra`、`## 🤖 AI Agent`、`## 🎯 面试准备` 三个区块，各自由 `data/articles.yml`
+里同名的分组驱动，占位符分别是 `aiinfra` / `aiagent` / `interview`。
+每组默认展示最新 6 篇，其余折叠进 `<details>` 可点开（`MAX_VISIBLE` 控制）。
+
+| 区块 | 源仓库 |
+| --- | --- |
+| AI Infra | `ai-infra-book-analysis` 的 `beginner-series` + `blogs`（🔒 私有） |
+| AI Agent | `MiniAgent-tutorial`（🔒 私有）、`agent-from-scratch` |
+| 面试准备 | `tech-review-notes`（GPU 调度 / 算力隔离）、`havesomefun`（🔒 私有，算法与 Go 手册） |
+
+## 新增文章怎么同步
+
+推了新文章到源仓库后，两条路：
+
+1. **自动（推荐）**：Actions → **Refresh article list** → Run workflow。脚本会扫源仓库、
+   按 URL 合并新条目（已有的保留并更新标题/日期），然后直接渲染 README 并提交。
+2. **手工**：直接在 GitHub 网页编辑 `data/articles.yml`，照抄现有条目的引号格式，push 即可。
+
+私有仓库的扫描需要 PAT：Settings → Secrets and variables → Actions → New repository secret，
+名字填 `GH_ARTICLES_TOKEN`，权限给 `repo`（只读即可）。**没配这个 Secret 的话只会扫公开仓库**
+（`ai-infra-book-analysis`、`MiniAgent-tutorial`、`havesomefun` 这三个私有仓扫不到）。
+
+> 注意：私有仓库的文章链接只有你自己能打开，访客会看到 404。这是预期行为——
+> 想让访客也能看，需要把对应仓库改成 public。
 
 # 常见问题
 
@@ -54,7 +83,7 @@ git clone https://github.com/yuzhiquan/yuzhiquan.git
 **语言分布里 HTML/CSS 占比过高**
 `EXCLUDE_REPOS` 已排除 `tech-review-notes` 和 `yuzhiquan.github.io`——这两个是博客/笔记仓库，里面 vendored 了整套前端主题，按字节统计会把 HTML/CSS 顶到第一，掩盖真实的 Go 占比。想调整就改 workflow 里的这个变量。
 
-**Writing 区块突然变成「暂无文章」**
+**三个精选区块突然变成「暂无文章」**
 `articles.yml` 里 **title / date 必须加双引号**。标题中若出现半角冒号加空格（例如
 `A four-stage LLM pipeline on Kubernetes: Ray + PyTorch + vLLM`），不加引号会让 YAML 解析失败，
 整个区块退化成 `_暂无文章_`。
@@ -72,6 +101,6 @@ git clone https://github.com/yuzhiquan/yuzhiquan.git
 | `MAX_PRS` | 5 | 展示的 PR 条数 |
 | `MAX_POSTS` | 5 | 展示的文章条数 |
 | `SKIP_PATTERNS` | `Add files via upload,Initial commit` | commit 标题命中前缀则跳过，避免刷屏 |
-| `MAX_WRITING` | 6 | Writing 区块**直接展示**的条数，其余自动折叠进 `<details>` |
-| `BLOG_FEED` | 空 | RSS 地址；**已停用**（博客停更），Writing 现在只由 `articles.yml` 驱动，填回地址即可恢复 |
+| `MAX_VISIBLE` | 6 | 每个精选区块**直接展示**的条数，其余自动折叠进 `<details>` |
+| `BLOG_FEED` | 空 | RSS 地址；**已停用**（博客停更），精选区块现在只由 `articles.yml` 驱动，填回地址即可恢复 |
 | `BLOG_SITE` | `https://yuzhiquan.github.io` | 纠正 RSS 里的错误域名 |

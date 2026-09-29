@@ -1,168 +1,297 @@
-# 精选文章源：AI Infra / Agent 系列，全部指向 GitHub 仓库里的原文。
-# 改这个文件就行，push 后 GitHub Actions 自动渲染到 README 的 Writing 区块。
+# 主页三大精选区块的文章源
 #
-# 字段：
-#   title  标题（必填）
-#   url    原文链接（必填，用 GitHub blob 链接）
-#   date   YYYY-MM-DD（必填，用于倒序排序；这里填的是该文件最后一次提交日期）
+# 三个分组分别对应 README 里的三个区块（占位符名见下）：
+#   ai-infra  -> <!--START_SECTION:aiinfra-->     AI Infra
+#   ai-agent  -> <!--START_SECTION:aiagent-->     AI Agent
+#   interview -> <!--START_SECTION:interview-->   面试准备
 #
-# 注意：title 和 date 都加了双引号——标题里若出现半角冒号加空格（如 "X: Y"），
-# 不加引号会让 YAML 解析失败，整区块会退化成「暂无文章」。新增条目请照抄引号。
-#   source 系列标签，渲染成列表末尾的灰色小标签
+# 这个文件由 .github/scripts/refresh_articles.py 生成与维护
+# （Actions → Refresh article list → Run workflow 手动触发）。
+# 也可以手工改，push 后定时任务会在下一次运行时渲染到 README。
 #
-# 说明：
-#   - README 里最新 6 篇直接展示，其余折叠在 <details> 里可点开（数量由
-#     workflow 的 MAX_WRITING 控制）。
-#   - 知乎 / LinkedIn 无法自动抓取（RSS 403 / 登录墙），要展示就照格式手动加。
-#   - 博客 RSS 已停用（BLOG_FEED 置空）；想恢复就把它填回 workflow 的 env。
+# ⚠️ title 和 date 必须加双引号：
+#   1. 标题里的半角冒号加空格（如 "X: Y"）不加引号会让 YAML 解析失败，
+#      整个区块会退化成「暂无文章」；
+#   2. date 不加引号会被 pyyaml 解析成 date 对象，排序时和字符串比较会炸。
+#
+# 中文路径的链接是百分号编码，直接写中文会 404。
+# ai-infra-book-analysis / MiniAgent-tutorial / havesomefun 是私有仓库，
+# 访客点开链接会看到 404，这是预期行为。
 
-# ---- GPU 调度与算力隔离（AI Infra 底层） ----
+ai-infra:
+  - title: "在 Kubernetes 上跑通大模型训练与推理（面向初学者）"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/README.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "第 0 篇：这个系列讲什么，不讲什么"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/00-scope-and-boundaries.zh-CN.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "第 1 篇：一次推理请求在 Kubernetes 上经过什么"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/01-request-path.zh-CN.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "第 2 篇：容量账 —— 先估一个数，再去集群里找它"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/02-capacity-accounting.zh-CN.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "第 3 篇：数据 —— 为什么 tokenize 完还要定长"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/03-data-processing.zh-CN.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "第 4 篇：训练 —— N 张卡怎么变成一个训练组"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/04-training.zh-CN.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "第 5 篇：批量推理 —— 同一个引擎，相反的目标"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/05-batch-inference.zh-CN.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "第 6 篇：在线服务 —— 让流量只打到真正就绪的实例"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/06-online-serving.zh-CN.md"
+    date: "2026-09-16"
+    source: "入门系列"
+  - title: "AI Infra 与云原生技术博客 / AI Infrastructure and Cloud Native Systems"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/README.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "从 HTTP 请求到 token：K8s 工程师需要理解的推理服务生命周期"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/01-from-http-to-tokens.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "Pod 已经 Running，模型为什么还没 Ready？"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/02-model-startup.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "为什么同样的 QPS，会压垮你的模型服务？"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/03-workload-and-capacity.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "大模型服务的 HPA 应该看什么？"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/04-inference-autoscaling.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "滚动发布时，正在生成的回答怎么办？"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/05-streaming-rollouts.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "负载均衡遇上 KV Cache：请求应该发给谁？"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/06-kv-aware-routing.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "从 K8s Job 到分布式训练：worker、状态与恢复"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/07-training-on-kubernetes.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "从数据到在线生成：用 Kubernetes、Ray、PyTorch 与 vLLM 跑通大模型链路"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/08-end-to-end-llm-pipeline.zh-CN.md"
+    date: "2026-09-14"
+    source: "博客"
+  - title: "Kubernetes + Ray + PyTorch + vLLM pipeline"
+    url: "https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/blogs/examples/08-llm-pipeline/README.md"
+    date: "2026-09-14"
+    source: "博客"
 
-- title: "GPU 虚拟化 / 切分 / 多租户隔离 · 14 题整理与扩展"
-  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%99%9A%E6%8B%9F%E5%8C%96%E4%B8%8E%E7%AE%97%E5%8A%9B%E9%9A%94%E7%A6%BB%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93-14%E9%A2%98%E6%95%B4%E7%90%86%E4%B8%8E%E6%89%A9%E5%B1%95.md
-  date: "2026-09-26"
-  source: GPU 调度与算力隔离
+ai-agent:
+  - title: "第七章：当 Agent 遇上知识库——RAG 是什么，怎么用 Mini-Agent 的思路来理解它"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/07_rag.md"
+    date: "2026-05-11"
+    source: "MiniAgent 源码"
+  - title: "Mini-Agent 源码解析系列文章"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/README.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "第零章：什么是 AI Agent？从零认识 Mini-Agent"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/00_overview.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "第一章：心脏地带——Agent 执行循环"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/01_agent_loop.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "第二章：Agent 的双手——工具系统设计"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/02_tools_system.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "第三章：Agent 的大脑接口——LLM 客户端与多 Provider 支持"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/03_llm_client.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "第四章：记忆与遗忘——上下文管理与自动摘要"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/04_context_management.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "第五章：更多技能——Skills 系统与 MCP 集成"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/05_skills_mcp.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "第六章：门面担当——CLI 设计与配置管理"
+    url: "https://github.com/yuzhiquan/MiniAgent-tutorial/blob/main/06_cli_config.md"
+    date: "2026-04-21"
+    source: "MiniAgent 源码"
+  - title: "Agent 开发系列教程"
+    url: "https://github.com/yuzhiquan/agent-from-scratch/blob/main/README.md"
+    date: "2026-04-20"
+    source: "从零实现"
+  - title: "第一篇：AI Agent 是什么？为什么选择 LangGraph？"
+    url: "https://github.com/yuzhiquan/agent-from-scratch/blob/main/01_introduction.md"
+    date: "2026-04-20"
+    source: "从零实现"
+  - title: "第二篇：LangGraph 核心概念——从零理解 Agent 框架"
+    url: "https://github.com/yuzhiquan/agent-from-scratch/blob/main/02_langgraph_101.md"
+    date: "2026-04-20"
+    source: "从零实现"
+  - title: "第三篇：构建邮件分类与回复 Agent"
+    url: "https://github.com/yuzhiquan/agent-from-scratch/blob/main/03_email_assistant.md"
+    date: "2026-04-20"
+    source: "从零实现"
+  - title: "第四篇：人机协作（Human-in-the-Loop）——让 Agent 更安全可控"
+    url: "https://github.com/yuzhiquan/agent-from-scratch/blob/main/04_hitl.md"
+    date: "2026-04-20"
+    source: "从零实现"
+  - title: "第五篇：记忆与自适应学习——让 Agent 越用越好"
+    url: "https://github.com/yuzhiquan/agent-from-scratch/blob/main/05_memory.md"
+    date: "2026-04-20"
+    source: "从零实现"
+  - title: "第六篇：测试与评估——如何知道 Agent 表现好不好？"
+    url: "https://github.com/yuzhiquan/agent-from-scratch/blob/main/06_evaluation.md"
+    date: "2026-04-20"
+    source: "从零实现"
 
-- title: "GPU 调度面试 · TOP10 逐字口述稿"
-  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95-TOP10%E9%80%90%E5%AD%97%E5%8F%A3%E8%BF%B0%E7%A8%BF.md
-  date: "2026-09-23"
-  source: GPU 调度与算力隔离
-
-- title: "GPU 调度岗位面试：27 题库覆盖度评估 + 补强题库"
-  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95-%E8%A6%86%E7%9B%96%E5%BA%A6%E8%AF%84%E4%BC%B0%E4%B8%8E%E8%A1%A5%E5%BC%BA%E9%A2%98%E5%BA%93.md
-  date: "2026-09-23"
-  source: GPU 调度与算力隔离
-
-- title: "GPU 调度研发工程师/专家 · 27 题全解析"
-  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93-27%E9%A2%98%E5%85%A8%E8%A7%A3%E6%9E%90.md
-  date: "2026-09-22"
-  source: GPU 调度与算力隔离
-
-# ---- LLM 推理流水线 on Kubernetes ----
-
-- title: "A four-stage LLM pipeline on Kubernetes: Ray + PyTorch + vLLM"
-  url: https://github.com/yuzhiquan/ray-vllm-on-kubernetes/blob/main/README.md
-  date: "2026-09-16"
-  source: AI Infra · LLM on K8s
-
-# ---- Agent Router 源码指南（中英双语，共 12 章） ----
-
-- title: "Agent Router Guide · Agent Router 源码入门"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/README.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "1. Agent Router 解决什么问题"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/01-big-picture.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "2. 运行一个请求，再找到代码入口"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/02-run-locally.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "3. 阅读本仓库所需的 Go 基础"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/03-reading-go.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "4. 把配置理解为相互连接的对象"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/04-configuration.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "5. 控制器如何把意图变成配置"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/05-control-plane.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "6. 沿代码跟踪一次聊天请求"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/06-request-lifecycle.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "7. 供应商格式转换如何工作"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/07-provider-translation.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "8. MCP：发现工具并路由工具调用"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/08-mcp.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "9. 认证、请求修改、配额与推理路由"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/09-security-and-policy.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "10. 通过观测理解请求，而不是猜测"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/10-observability.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "11. 从测试学习，并完成一个小修改"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/11-testing-and-change.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-- title: "12. 仓库地图与后续阅读路径"
-  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/12-repository-atlas.md
-  date: "2026-09-11"
-  source: Agent Router 指南
-
-# ---- Agent 工程（原创工具） ----
-
-- title: "loop-kit · 给任意仓库接入自主 Loop Engineering 分诊循环"
-  url: https://github.com/yuzhiquan/loop-kit/blob/main/README.md
-  date: "2026-06-19"
-  source: Agent 工程
-
-- title: "agent-relay · 把多个 AI coding CLI 串成「一次审批」的流水线"
-  url: https://github.com/yuzhiquan/agent-relay/blob/main/README.zh-CN.md
-  date: "2026-06-16"
-  source: Agent 工程
-
-# ---- Agent 开发系列（LangGraph 从零到生产） ----
-
-- title: "Agent 开发系列教程"
-  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/README.md
-  date: "2026-04-20"
-  source: Agent 开发系列
-
-- title: "第一篇：AI Agent 是什么？为什么选择 LangGraph？"
-  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/01_introduction.md
-  date: "2026-04-20"
-  source: Agent 开发系列
-
-- title: "第二篇：LangGraph 核心概念——从零理解 Agent 框架"
-  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/02_langgraph_101.md
-  date: "2026-04-20"
-  source: Agent 开发系列
-
-- title: "第三篇：构建邮件分类与回复 Agent"
-  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/03_email_assistant.md
-  date: "2026-04-20"
-  source: Agent 开发系列
-
-- title: "第四篇：人机协作（Human-in-the-Loop）——让 Agent 更安全可控"
-  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/04_hitl.md
-  date: "2026-04-20"
-  source: Agent 开发系列
-
-- title: "第五篇：记忆与自适应学习——让 Agent 越用越好"
-  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/05_memory.md
-  date: "2026-04-20"
-  source: Agent 开发系列
-
-- title: "第六篇：测试与评估——如何知道 Agent 表现好不好？"
-  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/06_evaluation.md
-  date: "2026-04-20"
-  source: Agent 开发系列
-
-# ---- 待补充：知乎 / LinkedIn（无法自动抓取，需手动加） ----
-# - title: 标题
-#   url: https://zhuanlan.zhihu.com/p/xxxxx
-#   date: 2026-08-12
-#   source: 知乎
+interview:
+  - title: "面试速成 · 最小题单（绕开 21 个模块，直接打 20 道题）"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E9%9D%A2%E8%AF%95%E9%80%9F%E6%88%90-%E6%9C%80%E5%B0%8F%E9%A2%98%E5%8D%95.md"
+    date: "2026-09-29"
+    source: "算法手册"
+  - title: "忘了怎么办 · 20 分钟遗忘诊断 + 重拾练法"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E9%81%97%E5%BF%98%E8%AF%8A%E6%96%AD%E4%B8%8E%E9%87%8D%E6%8B%BE%E6%96%B9%E6%B3%95.md"
+    date: "2026-09-29"
+    source: "算法手册"
+  - title: "面经高频题库 · 多维分析与你的刷题优先级"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E9%9D%A2%E7%BB%8F%E9%AB%98%E9%A2%91%E9%A2%98-%E5%A4%9A%E7%BB%B4%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%85%88%E7%BA%A7.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "《代码随想录》× 我的 Go 解题模板手册 · 对照总表"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%AF%B9%E7%85%A7%E4%B8%8E%E8%A1%A5%E5%85%85%E6%80%BB%E8%A1%A8.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "《labuladong 算法小抄》× 我的 Go 解题模板手册 · 对照总表"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/labuladong-%E5%AF%B9%E7%85%A7%E4%B8%8E%E8%A1%A5%E5%85%85%E6%80%BB%E8%A1%A8.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "解题模板手册 · Go 版"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF%E6%89%8B%E5%86%8C.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "二叉树 · 递归框架"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%80%92%E5%BD%92%E6%A1%86%E6%9E%B6.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "动态规划 · 五步法与四类状态"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E4%BA%94%E6%AD%A5%E6%B3%95%E4%B8%8E%E5%9B%9B%E7%B1%BB%E7%8A%B6%E6%80%81.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "回溯 · 三母模板与剪枝"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%9B%9E%E6%BA%AF-%E4%B8%89%E6%AF%8D%E6%A8%A1%E6%9D%BF%E4%B8%8E%E5%89%AA%E6%9E%9D.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "图 · DFS 洪水填充 / 并查集 / 拓扑排序"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%9B%BE-DFS%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86%E4%B8%8E%E6%8B%93%E6%89%91.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "滑动窗口 · 模板与易错点"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3-%E6%A8%A1%E6%9D%BF%E4%B8%8E%E6%98%93%E9%94%99%E7%82%B9.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "二分查找 · 边界统一模板"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE-%E8%BE%B9%E7%95%8C%E7%BB%9F%E4%B8%80%E6%A8%A1%E6%9D%BF.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "双指针 · 对撞、原地去重与 N 数之和"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%8F%8C%E6%8C%87%E9%92%88-%E5%AF%B9%E6%92%9E%E4%B8%8E%E5%8E%9F%E5%9C%B0%E5%8E%BB%E9%87%8D.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "哈希与前缀和 · 「看一眼就该想到」的查表技巧"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%93%88%E5%B8%8C%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "单调栈 / 单调队列"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%8D%95%E8%B0%83%E6%A0%88%E4%B8%8E%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "链表 · 四板斧与虚拟头"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E9%93%BE%E8%A1%A8-%E5%9B%9B%E6%9D%BF%E6%96%A7%E4%B8%8E%E8%99%9A%E6%8B%9F%E5%A4%B4.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "堆 / TopK · 「 Less 到底被谁调用」"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%A0%86%E4%B8%8ETopK-%E5%B0%8F%E9%A1%B6%E5%A0%86%E4%B8%8E%E5%9B%9E%E8%B0%83.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "字符串 · KMP 与原地双指针"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E4%B8%8E%E5%8E%9F%E5%9C%B0%E5%8F%8C%E6%8C%87%E9%92%88.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "手撕排序 · 不在 LeetCode 题号体系里，但总榜第 3"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E6%89%8B%E6%92%95%E6%8E%92%E5%BA%8F-%E5%BF%AB%E6%8E%92%E6%8C%96%E5%9D%91%E4%B8%8E%E8%BF%BD%E9%97%AE.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "区间问题 · 排序是唯一的前置条件"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98-%E5%90%88%E5%B9%B6%E4%B8%8E%E9%87%8D%E5%8F%A0%E5%88%A4%E5%AE%9A.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "贪心 · 无套路，但这四类可以模板化"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E8%B4%AA%E5%BF%83-%E5%9B%9B%E7%B1%BB%E5%8F%AF%E6%A8%A1%E6%9D%BF%E5%8C%96.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "位运算与数学小题 · 「一行代码解决的那些题」"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E4%BD%8D%E8%BF%90%E7%AE%97%E4%B8%8E%E6%95%B0%E5%AD%A6%E5%B0%8F%E9%A2%98.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "栈与队列 · 六个经典骨架"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97-%E5%85%AD%E4%B8%AA%E7%BB%8F%E5%85%B8.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "数据结构设计 · 「把几种数据结构拼起来」"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1-LRU%E4%B8%8ELFU%E4%B8%8ETwitter.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "BFS 框架 · 「为什么第一次到达就是最短」"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/BFS%E6%A1%86%E6%9E%B6-%E6%9C%80%E7%9F%AD%E6%AD%A5%E6%95%B0%E4%B8%8E%E5%8F%8C%E5%90%91BFS.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "Go 并发 · 从单例到线程安全 LRU"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/Go%E5%B9%B6%E5%8F%91-%E4%BB%8E%E5%8D%95%E4%BE%8B%E5%88%B0%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8LRU.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "二叉搜索树 · 「中序有序」这一个性质撑起所有题"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E8%A7%A3%E9%A2%98%E6%A8%A1%E6%9D%BF/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91-%E5%A2%9E%E5%88%A0%E6%9F%A5%E4%B8%8E%E5%90%88%E6%B3%95%E6%80%A7.md"
+    date: "2026-09-28"
+    source: "算法手册"
+  - title: "GPU 虚拟化 / 切分 / 多租户隔离 · 14 题整理与扩展"
+    url: "https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%99%9A%E6%8B%9F%E5%8C%96%E4%B8%8E%E7%AE%97%E5%8A%9B%E9%9A%94%E7%A6%BB%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93-14%E9%A2%98%E6%95%B4%E7%90%86%E4%B8%8E%E6%89%A9%E5%B1%95.md"
+    date: "2026-09-26"
+    source: "GPU 调度"
+  - title: "GPU 调度岗位面试：27 题库覆盖度评估 + 补强题库"
+    url: "https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95-%E8%A6%86%E7%9B%96%E5%BA%A6%E8%AF%84%E4%BC%B0%E4%B8%8E%E8%A1%A5%E5%BC%BA%E9%A2%98%E5%BA%93.md"
+    date: "2026-09-23"
+    source: "GPU 调度"
+  - title: "GPU 调度面试 · TOP10 逐字口述稿"
+    url: "https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95-TOP10%E9%80%90%E5%AD%97%E5%8F%A3%E8%BF%B0%E7%A8%BF.md"
+    date: "2026-09-23"
+    source: "GPU 调度"
+  - title: "LeetCode 215 · 数组中的第 K 个最大元素"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/topk/215%E7%AC%ACK%E5%A4%A7-%E8%A7%A3%E6%B3%95%E4%B8%8E%E8%BF%BD%E9%97%AE.md"
+    date: "2026-09-23"
+    source: "算法手册"
+  - title: "GPU 调度研发工程师/专家 · 27 题全解析"
+    url: "https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93-27%E9%A2%98%E5%85%A8%E8%A7%A3%E6%9E%90.md"
+    date: "2026-09-22"
+    source: "GPU 调度"
+  - title: "面试语法速查：Go 与 Python"
+    url: "https://github.com/yuzhiquan/havesomefun/blob/master/%E9%9D%A2%E8%AF%95%E8%AF%AD%E6%B3%95%E9%80%9F%E6%9F%A5-Go%E4%B8%8EPython.md"
+    date: "2026-09-21"
+    source: "算法手册"
+  - title: "技术复习笔记 / Tech Review Notes"
+    url: "https://github.com/yuzhiquan/tech-review-notes/blob/main/README.md"
+    date: "2026-09-01"
+    source: "GPU 调度"

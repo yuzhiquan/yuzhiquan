@@ -1,0 +1,53 @@
+name: Refresh article list
+
+# 手动触发：往源仓库（含私有仓库）推了新文章后，来 Actions 页面点一次 Run workflow，
+# 新文章就会被补进 data/articles.yml，随后定时任务会渲染到 README。
+#
+# 私有仓库需要 PAT：Settings → Secrets and variables → Actions → New repository secret，
+# 名字 GH_ARTICLES_TOKEN，权限给 repo（只读即可）。没配就只扫公开仓库。
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pyyaml
+        run: pip install --quiet pyyaml
+
+      - name: Scan source repos and merge new articles
+        run: python .github/scripts/refresh_articles.py
+        env:
+          GH_ARTICLES_TOKEN: ${{ secrets.GH_ARTICLES_TOKEN || secrets.GITHUB_TOKEN }}
+          ARTICLES_FILE: "data/articles.yml"
+
+      - name: Render README with the new list
+        run: python .github/scripts/gen_activity.py
+        env:
+          GH_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BLOG_FEED: ""
+          MAX_VISIBLE: "6"
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "no change"
+          else
+            git add README.md data/articles.yml
+            git commit -m "chore: refresh article list from source repos"
+            git pull --rebase --autostash origin master
+            git push
+          fi
