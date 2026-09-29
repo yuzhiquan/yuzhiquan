@@ -1,0 +1,20 @@
+# 跨平台精选文章：知乎 / LinkedIn / 公众号 / 博客，任何来源都能往里放。
+# 改这个文件就行，GitHub Actions 会自动渲染到 README 的 Writing 区块。
+#
+# 字段说明：
+#   title  标题（必填）
+#   url    原文链接（必填）
+#   date   发布日期 YYYY-MM-DD（必填，用于倒序排序）
+#   source 来源标签，如 知乎 / LinkedIn / 公众号（可省略）
+#
+# 这里会比博客 RSS 优先展示，两者按日期混排。
+
+- title: Flannel 改 CNI 方式
+  url: https://yuzhiquan.github.io/2021/03/03/flannel-to-cni/
+  date: 2021-03-03
+  source: Blog
+
+- title: go 内存逃逸
+  url: https://yuzhiquan.github.io/2020/12/14/go-mem/
+  date: 2020-12-20
+  source: Blog

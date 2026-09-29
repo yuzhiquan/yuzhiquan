@@ -45,11 +45,11 @@
 ## 🚀 Recent commits
 
 <!--START_SECTION:commits-->
+- [`8f6181d`](https://github.com/yuzhiquan/yuzhiquan/commit/8f6181da5a2e55491053fd27245eb6486d92170e) feat: add scheduled workflow to refresh recent commits, PRs and posts · `yuzhiquan/yuzhiquan`
 - [`f01afb9`](https://github.com/kubernetes-sigs/agent-sandbox/commit/f01afb95fd1fcd6c03507fded29f420fc3c1a406) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox`
 - [`10a7f4e`](https://github.com/kubernetes-sigs/agent-sandbox/commit/10a7f4ebe08892a2c2e66c7047e1a9bb601dc040) feat(clients/ts): support automatic sandbox expiration (#1605) · `kubernetes-sigs/agent-sandbox`
 - [`3fbd2a5`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/3fbd2a527214c428c7feb207e071d54c26551de8) Fix a stale header comment that contradicted the rest of the file · `yuzhiquan/ray-vllm-on-kubernetes`
 - [`185aae3`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/185aae3e2f83455c7bd089e673cb8056db69c824) Add a GPU-free capacity checker · `yuzhiquan/ray-vllm-on-kubernetes`
-- [`7a1ac6f`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/7a1ac6f6001cbddd2d3029b51e89d3e62ba93792) Scope this repository to code and manifests only · `yuzhiquan/ray-vllm-on-kubernetes`
 <!--END_SECTION:commits-->
 
 ## 🔀 Recent pull requests
@@ -62,17 +62,17 @@
 - [#1339](https://github.com/kubernetes-sigs/agent-sandbox/pull/1339) feat(mcp): add /healthz and /readyz probe endpoints · `kubernetes-sigs/agent-sandbox` · _merged_
 <!--END_SECTION:prs-->
 
-## 📝 Latest posts
+## ✍️ Writing
 
-<!--START_SECTION:posts-->
-- [Flannel改CNI方式](https://yuzhiquan.github.io/2021/03/03/flannel-to-cni/) · 2021-03-03
-- [go内存逃逸](https://yuzhiquan.github.io/2020/12/14/go-mem/) · 2019-12-20
-- [CAS5.x编译、部署(1)-LDAP支持](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin/) · 2019-01-21
-- [Docker基础](https://yuzhiquan.github.io/2020/12/14/Docker%20%E5%9F%BA%E7%A1%80/) · 2020-08-04
-- [CAS5.x编译、部署(3)-登录页定制](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin3/) · 2019-01-21
-<!--END_SECTION:posts-->
+<!--START_SECTION:writing-->
+- [Flannel 改 CNI 方式](https://yuzhiquan.github.io/2021/03/03/flannel-to-cni/) · 2021-03-03 · `Blog`
+- [go 内存逃逸](https://yuzhiquan.github.io/2020/12/14/go-mem/) · 2020-12-20 · `Blog`
+- [Docker基础](https://yuzhiquan.github.io/2020/12/14/Docker%20%E5%9F%BA%E7%A1%80/) · 2020-08-04 · `Blog`
+- [CAS5.x编译、部署(1)-LDAP支持](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin/) · 2019-01-21 · `Blog`
+- [CAS5.x编译、部署(3)-登录页定制](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin3/) · 2019-01-21 · `Blog`
+<!--END_SECTION:writing-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:14 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:22 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
