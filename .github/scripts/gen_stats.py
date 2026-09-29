@@ -289,7 +289,8 @@ def render_langs(pairs):
 def render_graph(days, total):
     """53 周 x 7 天热力图，仿 GitHub 官方样式。"""
     cell, gap, step = 10, 3, 13
-    left, top = 32, 24
+    # top 需要给标题(y=16)和月份标签(y=top-6)各留一行，否则会重叠
+    left, top = 32, 42
     weeks = (len(days) + 6) // 7
     w = left + weeks * step + 12
     h = top + 7 * step + 30
@@ -319,13 +320,14 @@ def render_graph(days, total):
                 label = datetime.strptime(week[0]["date"], "%Y-%m-%d").strftime("%b")
                 out.append(f'  <text class="axis" x="{x}" y="{top - 6}">{label}</text>')
 
-    # 图例
+    # 图例：Less [5 色块] More，顺序左→右排布，避免文字压到色块
     ly = top + 7 * step + 14
-    out.append(f'  <text class="axis" x="{w - 12 - 78}" y="{ly}">Less</text>')
+    leg_x = w - 12 - 135
+    out.append(f'  <text class="axis" x="{leg_x}" y="{ly}">Less</text>')
     for k in range(5):
-        out.append(f'  <rect class="q{k}" x="{w - 12 - 56 + k * 13}" y="{ly - 9}" '
+        out.append(f'  <rect class="q{k}" x="{leg_x + 26 + k * 13}" y="{ly - 9}" '
                    f'width="10" height="10" rx="2"/>')
-    out.append(f'  <text class="axis" x="{w - 12}" y="{ly}" text-anchor="end">More</text>')
+    out.append(f'  <text class="axis" x="{leg_x + 92}" y="{ly}">More</text>')
 
     # 连续贡献天数
     cur, longest, run = 0, 0, 0
