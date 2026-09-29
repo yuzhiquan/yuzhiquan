@@ -34,7 +34,7 @@ jobs:
           BLOG_SITE: "https://yuzhiquan.github.io"
           SKIP_PATTERNS: "Add files via upload,Initial commit"
           MAX_COMMITS: "5"
-          MAX_PRS: "5"
+          MAX_PRS: "10"
           MAX_POSTS: "5"
           MAX_VISIBLE: "6"                    # 每个精选区块默认展示的条数，其余折叠
           ARTICLES_FILE: "data/articles.yml"

@@ -122,8 +122,7 @@ def skipped(message):
     return any(first.startswith(p) for p in SKIP)
 
 
-def fetch_activity(events):
-    # 最近 commit
+def fetch_commits(events):
     try:
         q = urllib.parse.quote(f"author:{USERNAME}")
         data = get(f"https://api.github.com/search/commits?q={q}&sort=committer-date"
@@ -138,6 +137,15 @@ def fetch_activity(events):
     except urllib.error.HTTPError as exc:
         print(f"commit search failed ({exc.code}), fallback to events")
         commits = fallback_commits(events)
+    return commits
+
+
+def fetch_activity(events, want_commits=True):
+    # 最近 commit（README 里没有该占位符时整段跳过，不浪费 API 额度）
+    if not want_commits:
+        commits = []
+    else:
+        commits = fetch_commits(events)
 
     # 最近 PR
     try:
@@ -325,8 +333,15 @@ def replace(text, name, body, inline=False):
 
 
 def main():
-    events = fetch_events()
-    commits, prs = fetch_activity(events)
+    with open(README, encoding="utf-8") as f:
+        content = f.read()
+
+    # README 里没有的区块就不去拉对应数据（省 API 额度、也避免无意义的限流）
+    want_commits = "START_SECTION:commits" in content
+    want_prs = "START_SECTION:prs" in content
+
+    events = fetch_events() if (want_commits or want_prs) else []
+    commits, prs = fetch_activity(events, want_commits=want_commits)
     try:
         posts = fetch_posts()
     except Exception as exc:
@@ -342,10 +357,11 @@ def main():
         name = section_of.get(group, group)
         rendered[name] = build_section(rows, posts if group == DEFAULT_GROUP else None)
 
-    with open(README, encoding="utf-8") as f:
-        content = f.read()
-    content = replace(content, "commits", "\n".join(commits) or "_暂无公开 commit_")
-    content = replace(content, "prs", "\n".join(prs) or "_暂无公开 PR_")
+    if want_commits:
+        content = replace(content, "commits",
+                          "\n".join(commits) or "_暂无公开 commit_")
+    if want_prs:
+        content = replace(content, "prs", "\n".join(prs) or "_暂无公开 PR_")
     for name, body in rendered.items():
         content = replace(content, name, body or "_暂无文章_")
     content = replace(content, "updated",

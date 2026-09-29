@@ -12,22 +12,53 @@
 
 ## 👨‍💻 About me
 
-- 🔭 当前在做 **CloudNative / 容器 PaaS 平台**
-- 🌱 持续投入：**Kubernetes 调度与扩展、容器运行时、GPU 算力调度与隔离、云原生可观测性**
+- 🔭 当前在做 **容器 PaaS 平台 / Service Mesh 全集群落地 / 多云基础设施**
+- 🌱 持续投入：**Kubernetes 调度与弹性、Service Mesh 与多集群、容器网络、GPU 算力调度与隔离、云原生可观测性**
 - 👯 社区参与：`@kubernetes` / `@kubernetes-sigs` member，`sig-instrumentation`、`wg-structured-logging` reviewer
 - 💬 乐于交流：Go、K8s 控制器与 Operator、调度器扩展、Structured Logging、Metrics/Tracing
 - 📫 找工作：云原生工程师 / 架构师方向，**Open to new opportunity**
 
 ## 🛠 Tech stack
 
+**Languages**
+
 <p>
   <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
-  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash">
+</p>
+
+**Cloud Native & Platform**
+
+<p>
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes">
   <img src="https://img.shields.io/badge/Containerd-575757?style=flat-square&logo=containerd&logoColor=white" alt="Containerd">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/Istio-466BB0?style=flat-square&logo=istio&logoColor=white" alt="Istio">
+  <img src="https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white" alt="Helm">
+  <img src="https://img.shields.io/badge/etcd-419EDA?style=flat-square&logo=etcd&logoColor=white" alt="etcd">
+  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus">
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana">
+</p>
+
+**Infra · Cloud · Networking**
+
+<p>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
+  <img src="https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white" alt="Terraform">
+  <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square" alt="AWS">
+  <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white" alt="Google Cloud">
+  <img src="https://img.shields.io/badge/CNI-326CE5?style=flat-square" alt="CNI">
+  <img src="https://img.shields.io/badge/SR--IOV-4A5568?style=flat-square" alt="SR-IOV">
+</p>
+
+**AI Infra**
+
+<p>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch">
+  <img src="https://img.shields.io/badge/Ray-FF8008?style=flat-square" alt="Ray">
+  <img src="https://img.shields.io/badge/vLLM-5A67D8?style=flat-square" alt="vLLM">
+  <img src="https://img.shields.io/badge/LangGraph-3B82F6?style=flat-square" alt="LangGraph">
 </p>
 
 ## 📊 GitHub stats
@@ -41,16 +72,6 @@
   <img src="assets/contribution-graph.svg" width="733" alt="Contribution graph">
 </div>
 
-## 🚀 Recent commits
-
-<!--START_SECTION:commits-->
-- [`4797c3f`](https://github.com/yuzhiquan/yuzhiquan/commit/4797c3f967f8f4a19bd396a925f6c4ebf4a868cb) docs: document the YAML quoting gotcha for articles.yml · `yuzhiquan/yuzhiquan`
-- [`194a83f`](https://github.com/yuzhiquan/yuzhiquan/commit/194a83fe7d16bf7e9205281c988f2c86207b3a2d) fix: quote titles/dates in articles.yml (bare ': ' broke YAML parse -> s... · `yuzhiquan/yuzhiquan`
-- [`918c63e`](https://github.com/yuzhiquan/yuzhiquan/commit/918c63eefdfb4c6de6f4efcdf45c34885d6fa265) feat: writing section driven by AI Infra/Agent articles, collapse the re... · `yuzhiquan/yuzhiquan`
-- [`c5facfe`](https://github.com/yuzhiquan/yuzhiquan/commit/c5facfe989b88dfa7c7ea2f35a05d32743e09eae) fix: graph label overlaps; document self-hosted stat cards · `yuzhiquan/yuzhiquan`
-- [`3f62c04`](https://github.com/yuzhiquan/yuzhiquan/commit/3f62c0431201fbd0de152b644818b80d9962ebde) feat: self-hosted stat cards (stats/top-langs/contribution graph as loca... · `yuzhiquan/yuzhiquan`
-<!--END_SECTION:commits-->
-
 ## 🔀 Recent pull requests
 
 <!--START_SECTION:prs-->
@@ -59,6 +80,11 @@
 - [#1605](https://github.com/kubernetes-sigs/agent-sandbox/pull/1605) feat(clients/ts): support automatic sandbox expiration · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#140143](https://github.com/kubernetes/kubernetes/pull/140143) scheduler: add podgroup_cache_missed_events_total metric · `kubernetes/kubernetes` · _closed_
 - [#1339](https://github.com/kubernetes-sigs/agent-sandbox/pull/1339) feat(mcp): add /healthz and /readyz probe endpoints · `kubernetes-sigs/agent-sandbox` · _merged_
+- [#1329](https://github.com/kubernetes-sigs/agent-sandbox/pull/1329) feat(mcp): add list_files and file_exists tools · `kubernetes-sigs/agent-sandbox` · _merged_
+- [#1291](https://github.com/kubernetes-sigs/agent-sandbox/pull/1291) feat(api): mirror backing pod's PodScheduled condition into Sandbox stat... · `kubernetes-sigs/agent-sandbox` · _merged_
+- [#1290](https://github.com/kubernetes-sigs/agent-sandbox/pull/1290) feat(warmpool): configurable readiness grace period and unschedulable re... · `kubernetes-sigs/agent-sandbox` · _merged_
+- [#6529](https://github.com/kubernetes/org/pull/6529) Add yuzhiquan to kubernetes-sigs org · `kubernetes/org` · _merged_
+- [#139923](https://github.com/kubernetes/kubernetes/pull/139923) Degrade gracefully when etcd Maintenance.Status is PermissionDenied · `kubernetes/kubernetes` · _open_
 <!--END_SECTION:prs-->
 
 ## 🧠 AI Infra
@@ -168,7 +194,7 @@
 </details>
 <!--END_SECTION:interview-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 11:41 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 12:06 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
