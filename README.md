@@ -72,7 +72,7 @@
 - [CAS5.x编译、部署(3)-登录页定制](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin3/) · 2019-01-21 · `Blog`
 <!--END_SECTION:writing-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:27 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:28 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
