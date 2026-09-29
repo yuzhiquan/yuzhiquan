@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="234"
+     viewBox="0 0 380 234" role="img" aria-label="Most used languages">
+  <title>Most used languages</title>
+  <style>
+    .card  { fill: #ffffff; stroke: #d0d7de; }
+    .title { fill: #1f2328; font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .label { fill: #656d76; font: 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .value { fill: #1f2328; font: 600 17px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .name  { fill: #1f2328; font: 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .pct   { fill: #656d76; font: 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .track { fill: #eaeef2; }
+    .q0 { fill: #ebedf0; } .q1 { fill: #9be9a8; }
+    .q2 { fill: #40c463; } .q3 { fill: #30a14e; } .q4 { fill: #216e39; }
+    .axis  { fill: #656d76; font: 10px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .frame { fill: none; stroke: #d0d7de; }
+    @media (prefers-color-scheme: dark) {
+      .card  { fill: #0d1117; stroke: #30363d; }
+      .title, .value, .name { fill: #e6edf3; }
+      .label, .pct, .axis { fill: #8b949e; }
+      .track { fill: #21262d; }
+      .q0 { fill: #161b22; } .q1 { fill: #0e4429; }
+      .q2 { fill: #006d32; } .q3 { fill: #26a641; } .q4 { fill: #39d353; }
+      .frame { stroke: #30363d; }
+    }
+  </style>
+  <rect class="card" x="0.5" y="0.5" width="379" height="233" rx="10"/>
+  <text class="title" x="16" y="28">Most Used Languages</text>  <text class="name" x="16" y="57">Python</text>  <text class="pct" x="364" y="57" text-anchor="end">75.9%</text>  <rect class="track" x="16" y="63" width="348" height="8" rx="4"/>  <rect x="16" y="63" width="264" height="8" rx="4" fill="#3572A5"/>  <text class="name" x="16" y="87">Shell</text>  <text class="pct" x="364" y="87" text-anchor="end">11.4%</text>  <rect class="track" x="16" y="93" width="348" height="8" rx="4"/>  <rect x="16" y="93" width="39" height="8" rx="4" fill="#89e051"/>  <text class="name" x="16" y="117">Go</text>  <text class="pct" x="364" y="117" text-anchor="end">9.7%</text>  <rect class="track" x="16" y="123" width="348" height="8" rx="4"/>  <rect x="16" y="123" width="33" height="8" rx="4" fill="#00ADD8"/>  <text class="name" x="16" y="147">Makefile</text>  <text class="pct" x="364" y="147" text-anchor="end">2.3%</text>  <rect class="track" x="16" y="153" width="348" height="8" rx="4"/>  <rect x="16" y="153" width="7" height="8" rx="4" fill="#427819"/>  <text class="name" x="16" y="177">Rust</text>  <text class="pct" x="364" y="177" text-anchor="end">0.5%</text>  <rect class="track" x="16" y="183" width="348" height="8" rx="4"/>  <rect x="16" y="183" width="6" height="8" rx="4" fill="#dea584"/>  <text class="name" x="16" y="207">Dockerfile</text>  <text class="pct" x="364" y="207" text-anchor="end">0.3%</text>  <rect class="track" x="16" y="213" width="348" height="8" rx="4"/>  <rect x="16" y="213" width="6" height="8" rx="4" fill="#384d54"/></svg>

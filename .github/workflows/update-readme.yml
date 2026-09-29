@@ -7,7 +7,7 @@ on:
   workflow_dispatch:            # 允许在 Actions 页面手动点一次
   push:
     branches: [master]
-    paths: [".github/scripts/gen_activity.py", "data/articles.yml"]
+    paths: [".github/scripts/gen_activity.py", ".github/scripts/gen_stats.py", "data/articles.yml"]
 
 permissions:
   contents: write
@@ -39,6 +39,15 @@ jobs:
           MAX_WRITING: "6"
           ARTICLES_FILE: "data/articles.yml"
 
+      - name: Generate stat cards (local SVG)
+        run: python .github/scripts/gen_stats.py
+        env:
+          GH_USERNAME: ${{ github.repository_owner }}
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          ASSETS_DIR: "assets"
+          EXCLUDE_REPOS: "yuzhiquan/tech-review-notes,yuzhiquan/yuzhiquan.github.io"
+          LANG_COUNT: "6"
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
@@ -46,7 +55,7 @@ jobs:
           if git diff --quiet; then
             echo "no change"
           else
-            git add README.md
+            git add README.md assets
             git commit -m "chore: update recent activity"
             git pull --rebase --autostash origin master
             git push

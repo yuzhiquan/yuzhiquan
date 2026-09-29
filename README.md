@@ -33,13 +33,12 @@
 ## 📊 GitHub stats
 
 <div align="center">
-  <img height="150" src="https://github-readme-stats.vercel.app/api?username=yuzhiquan&show_icons=true&include_all_commits=true&hide_border=true&count_private=false" alt="GitHub stats">
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuzhiquan&layout=compact&hide_border=true&langs_count=6" alt="Top languages">
+  <img src="assets/github-stats.svg" width="380" alt="GitHub stats">
+  <img src="assets/top-langs.svg" width="380" alt="Most used languages">
 </div>
 
 <div align="center">
-  <img height="150" src="https://github-readme-streak-stats.herokuapp.com/?user=yuzhiquan&hide_border=true" alt="Commit streak">
-  <img height="150" src="https://github-readme-activity-graph.vercel.app/graph?username=yuzhiquan&hide_border=true&bg_color=ffffff&color=326CE5&line=326CE5&point=326CE5&area=true" alt="Contribution graph">
+  <img src="assets/contribution-graph.svg" width="733" alt="Contribution graph">
 </div>
 
 ## 🚀 Recent commits
