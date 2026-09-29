@@ -54,6 +54,13 @@ git clone https://github.com/yuzhiquan/yuzhiquan.git
 **语言分布里 HTML/CSS 占比过高**
 `EXCLUDE_REPOS` 已排除 `tech-review-notes` 和 `yuzhiquan.github.io`——这两个是博客/笔记仓库，里面 vendored 了整套前端主题，按字节统计会把 HTML/CSS 顶到第一，掩盖真实的 Go 占比。想调整就改 workflow 里的这个变量。
 
+**Writing 区块突然变成「暂无文章」**
+`articles.yml` 里 **title / date 必须加双引号**。标题中若出现半角冒号加空格（例如
+`A four-stage LLM pipeline on Kubernetes: Ray + PyTorch + vLLM`），不加引号会让 YAML 解析失败，
+整个区块退化成 `_暂无文章_`。
+这个坑本地发现不了——脚本在没装 pyyaml 时会走内置简易解析器（能容错），
+而 Actions 里装了 pyyaml，解析失败就直接返回空。改完 yml 建议本地 `pip install pyyaml` 后再跑一次脚本验证。
+
 **博客链接不对**
 `atom.xml` 里是 Hexo 默认的 `http://yoursite.com`。脚本已通过 `BLOG_SITE` 环境变量纠正成真实域名；**根治办法**是改博客 `_config.yml` 的 `url: https://yuzhiquan.github.io` 后重新生成。
 
