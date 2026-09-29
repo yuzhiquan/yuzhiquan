@@ -1,35 +1,165 @@
-# 跨平台精选文章：知乎 / LinkedIn / 公众号 / 博客，任何来源都能往里放。
-# 改这个文件就行，GitHub Actions 会自动渲染到 README 的 Writing 区块。
+# 精选文章源：AI Infra / Agent 系列，全部指向 GitHub 仓库里的原文。
+# 改这个文件就行，push 后 GitHub Actions 自动渲染到 README 的 Writing 区块。
 #
-# 字段说明：
+# 字段：
 #   title  标题（必填）
-#   url    原文链接（必填）
-#   date   发布日期 YYYY-MM-DD（必填，用于倒序排序）
-#   source 来源标签，如 知乎 / LinkedIn / 公众号（可省略）
+#   url    原文链接（必填，用 GitHub blob 链接）
+#   date   YYYY-MM-DD（必填，用于倒序排序；这里填的是该文件最后一次提交日期）
+#   source 系列标签，渲染成列表末尾的灰色小标签
 #
-# 注意：知乎（RSS 已 403 反爬）和 LinkedIn（登录墙）都无法自动抓取，
-# 这两处的文章需要手动加到这里；博客 RSS 会自动混入，并按 URL 去重。
-#
-# 新增时照着下面格式加即可，顺序无所谓，脚本会按 date 倒序排。
+# 说明：
+#   - README 里最新 6 篇直接展示，其余折叠在 <details> 里可点开（数量由
+#     workflow 的 MAX_WRITING 控制）。
+#   - 知乎 / LinkedIn 无法自动抓取（RSS 403 / 登录墙），要展示就照格式手动加。
+#   - 博客 RSS 已停用（BLOG_FEED 置空）；想恢复就把它填回 workflow 的 env。
 
-- title: Flannel 改 CNI 方式
-  url: https://yuzhiquan.github.io/2021/03/03/flannel-to-cni/
-  date: 2021-03-03
-  source: Blog
+# ---- GPU 调度与算力隔离（AI Infra 底层） ----
 
-- title: go 内存逃逸
-  url: https://yuzhiquan.github.io/2020/12/14/go-mem/
-  date: 2020-12-20
-  source: Blog
+- title: GPU 虚拟化 / 切分 / 多租户隔离 · 14 题整理与扩展
+  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%99%9A%E6%8B%9F%E5%8C%96%E4%B8%8E%E7%AE%97%E5%8A%9B%E9%9A%94%E7%A6%BB%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93-14%E9%A2%98%E6%95%B4%E7%90%86%E4%B8%8E%E6%89%A9%E5%B1%95.md
+  date: 2026-09-26
+  source: GPU 调度与算力隔离
 
-# 待补充：知乎文章（https://www.zhihu.com/people/hanniba）
+- title: GPU 调度面试 · TOP10 逐字口述稿
+  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95-TOP10%E9%80%90%E5%AD%97%E5%8F%A3%E8%BF%B0%E7%A8%BF.md
+  date: 2026-09-23
+  source: GPU 调度与算力隔离
+
+- title: GPU 调度岗位面试：27 题库覆盖度评估 + 补强题库
+  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95-%E8%A6%86%E7%9B%96%E5%BA%A6%E8%AF%84%E4%BC%B0%E4%B8%8E%E8%A1%A5%E5%BC%BA%E9%A2%98%E5%BA%93.md
+  date: 2026-09-23
+  source: GPU 调度与算力隔离
+
+- title: GPU 调度研发工程师/专家 · 27 题全解析
+  url: https://github.com/yuzhiquan/tech-review-notes/blob/main/GPU%E8%B0%83%E5%BA%A6%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93-27%E9%A2%98%E5%85%A8%E8%A7%A3%E6%9E%90.md
+  date: 2026-09-22
+  source: GPU 调度与算力隔离
+
+# ---- LLM 推理流水线 on Kubernetes ----
+
+- title: A four-stage LLM pipeline on Kubernetes: Ray + PyTorch + vLLM
+  url: https://github.com/yuzhiquan/ray-vllm-on-kubernetes/blob/main/README.md
+  date: 2026-09-16
+  source: AI Infra · LLM on K8s
+
+# ---- Agent Router 源码指南（中英双语，共 12 章） ----
+
+- title: Agent Router Guide · Agent Router 源码入门
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/README.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 1. Agent Router 解决什么问题
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/01-big-picture.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 2. 运行一个请求，再找到代码入口
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/02-run-locally.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 3. 阅读本仓库所需的 Go 基础
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/03-reading-go.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 4. 把配置理解为相互连接的对象
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/04-configuration.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 5. 控制器如何把意图变成配置
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/05-control-plane.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 6. 沿代码跟踪一次聊天请求
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/06-request-lifecycle.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 7. 供应商格式转换如何工作
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/07-provider-translation.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 8. MCP：发现工具并路由工具调用
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/08-mcp.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 9. 认证、请求修改、配额与推理路由
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/09-security-and-policy.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 10. 通过观测理解请求，而不是猜测
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/10-observability.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 11. 从测试学习，并完成一个小修改
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/11-testing-and-change.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+- title: 12. 仓库地图与后续阅读路径
+  url: https://github.com/yuzhiquan/agent-router-guide/blob/main/zh/12-repository-atlas.md
+  date: 2026-09-11
+  source: Agent Router 指南
+
+# ---- Agent 工程（原创工具） ----
+
+- title: loop-kit · 给任意仓库接入自主 Loop Engineering 分诊循环
+  url: https://github.com/yuzhiquan/loop-kit/blob/main/README.md
+  date: 2026-06-19
+  source: Agent 工程
+
+- title: agent-relay · 把多个 AI coding CLI 串成「一次审批」的流水线
+  url: https://github.com/yuzhiquan/agent-relay/blob/main/README.zh-CN.md
+  date: 2026-06-16
+  source: Agent 工程
+
+# ---- Agent 开发系列（LangGraph 从零到生产） ----
+
+- title: Agent 开发系列教程
+  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/README.md
+  date: 2026-04-20
+  source: Agent 开发系列
+
+- title: 第一篇：AI Agent 是什么？为什么选择 LangGraph？
+  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/01_introduction.md
+  date: 2026-04-20
+  source: Agent 开发系列
+
+- title: 第二篇：LangGraph 核心概念——从零理解 Agent 框架
+  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/02_langgraph_101.md
+  date: 2026-04-20
+  source: Agent 开发系列
+
+- title: 第三篇：构建邮件分类与回复 Agent
+  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/03_email_assistant.md
+  date: 2026-04-20
+  source: Agent 开发系列
+
+- title: 第四篇：人机协作（Human-in-the-Loop）——让 Agent 更安全可控
+  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/04_hitl.md
+  date: 2026-04-20
+  source: Agent 开发系列
+
+- title: 第五篇：记忆与自适应学习——让 Agent 越用越好
+  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/05_memory.md
+  date: 2026-04-20
+  source: Agent 开发系列
+
+- title: 第六篇：测试与评估——如何知道 Agent 表现好不好？
+  url: https://github.com/yuzhiquan/agent-from-scratch/blob/main/06_evaluation.md
+  date: 2026-04-20
+  source: Agent 开发系列
+
+# ---- 待补充：知乎 / LinkedIn（无法自动抓取，需手动加） ----
 # - title: 标题
 #   url: https://zhuanlan.zhihu.com/p/xxxxx
 #   date: 2026-08-12
 #   source: 知乎
-
-# 待补充：LinkedIn 文章（https://www.linkedin.com/in/zhiquan-yu-7a701b97/）
-# - title: 标题
-#   url: https://www.linkedin.com/pulse/xxxxx
-#   date: 2026-07-01
-#   source: LinkedIn

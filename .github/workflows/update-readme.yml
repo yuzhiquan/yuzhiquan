@@ -30,7 +30,7 @@ jobs:
         env:
           GH_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BLOG_FEED: "https://yuzhiquan.github.io/atom.xml"
+          BLOG_FEED: ""                       # 博客已停更，Writing 区块改用 articles.yml
           BLOG_SITE: "https://yuzhiquan.github.io"
           SKIP_PATTERNS: "Add files via upload,Initial commit"
           MAX_COMMITS: "5"

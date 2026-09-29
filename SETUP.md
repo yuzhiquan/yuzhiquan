@@ -65,5 +65,6 @@ git clone https://github.com/yuzhiquan/yuzhiquan.git
 | `MAX_PRS` | 5 | 展示的 PR 条数 |
 | `MAX_POSTS` | 5 | 展示的文章条数 |
 | `SKIP_PATTERNS` | `Add files via upload,Initial commit` | commit 标题命中前缀则跳过，避免刷屏 |
-| `BLOG_FEED` | `https://yuzhiquan.github.io/atom.xml` | RSS 地址，置空则不展示文章 |
+| `MAX_WRITING` | 6 | Writing 区块**直接展示**的条数，其余自动折叠进 `<details>` |
+| `BLOG_FEED` | 空 | RSS 地址；**已停用**（博客停更），Writing 现在只由 `articles.yml` 驱动，填回地址即可恢复 |
 | `BLOG_SITE` | `https://yuzhiquan.github.io` | 纠正 RSS 里的错误域名 |

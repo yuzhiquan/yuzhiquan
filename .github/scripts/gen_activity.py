@@ -203,7 +203,11 @@ def load_articles(path):
         return []
     try:
         import yaml
-        return yaml.safe_load(open(path, encoding="utf-8")) or []
+        data = yaml.safe_load(open(path, encoding="utf-8"))
+        # 兼容顶层列表和 {articles: [...]} 两种写法
+        if isinstance(data, dict):
+            data = data.get("articles") or data.get("items") or []
+        return data or []
     except ImportError:
         pass
     except Exception as exc:
@@ -262,12 +266,19 @@ def build_writing(articles, posts):
         rows.append(p)
     rows.sort(key=lambda r: r.get("date", ""), reverse=True)
 
-    out = []
-    for r in rows[:MAX_WRITING]:
+    def line(r):
         date = f" · {r['date']}" if r.get("date") else ""
         src = f" · `{r['source']}`" if r.get("source") else ""
-        out.append(f"- [{clean(r['title'])}]({r['url']}){date}{src}")
-    return out
+        return f"- [{clean(r['title'])}]({r['url']}){date}{src}"
+
+    body = "\n".join(line(r) for r in rows[:MAX_WRITING])
+    rest = rows[MAX_WRITING:]
+    if rest:
+        # 文章较多时把其余的折叠起来：<details> 内需空行，GitHub 才会渲染其中的 Markdown
+        more = "\n".join(line(r) for r in rest)
+        body += (f"\n\n<details>\n<summary><b>📂 展开其余 {len(rest)} 篇</b>"
+                 f"（共 {len(rows)} 篇）</summary>\n\n{more}\n\n</details>")
+    return body
 
 
 def replace(text, name, body, inline=False):
@@ -293,12 +304,13 @@ def main():
         content = f.read()
     content = replace(content, "commits", "\n".join(commits) or "_暂无公开 commit_")
     content = replace(content, "prs", "\n".join(prs) or "_暂无公开 PR_")
-    content = replace(content, "writing", "\n".join(writing) or "_暂无文章_")
+    content = replace(content, "writing", writing or "_暂无文章_")
     content = replace(content, "updated",
                       datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), inline=True)
     with open(README, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"done: {len(commits)} commits / {len(prs)} PRs / {len(writing)} writing")
+    total_writing = writing.count("\n- [") + (1 if writing.startswith("- [") else 0)
+    print(f"done: {len(commits)} commits / {len(prs)} PRs / {total_writing} writing")
 
 
 if __name__ == "__main__":
