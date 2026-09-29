@@ -12,11 +12,11 @@
 
 ## 👨‍💻 About me
 
-- 🔭 当前在做 **容器 PaaS 平台 / Service Mesh 全集群落地 / 多云基础设施**
-- 🌱 持续投入：**Kubernetes 调度与弹性、Service Mesh 与多集群、容器网络、GPU 算力调度与隔离、云原生可观测性**
-- 👯 社区参与：`@kubernetes` / `@kubernetes-sigs` member，`sig-instrumentation`、`wg-structured-logging` reviewer
-- 💬 乐于交流：Go、K8s 控制器与 Operator、调度器扩展、Structured Logging、Metrics/Tracing
-- 📫 找工作：云原生工程师 / 架构师方向，**Open to new opportunity**
+- 🔭 Currently building **container PaaS platforms / cluster-wide Service Mesh rollout / multi-cloud infrastructure**
+- 🌱 Focused on: **Kubernetes scheduling & elasticity, Service Mesh & multi-cluster, container networking, GPU scheduling & isolation, cloud-native observability**
+- 👯 Community: member of `@kubernetes` / `@kubernetes-sigs`, reviewer in `sig-instrumentation` and `wg-structured-logging`
+- 💬 Happy to talk about: Go, K8s controllers & Operators, scheduler extensions, structured logging, metrics/tracing
+- 📫 Open to new opportunities: cloud-native engineer / architect roles
 
 <details>
 <summary><b>🇨🇳 中文简介 · 点击展开</b></summary>
@@ -26,8 +26,6 @@
 - 👯 社区参与：`@kubernetes` / `@kubernetes-sigs` member，`sig-instrumentation`、`wg-structured-logging` reviewer
 - 💬 乐于交流：Go、K8s 控制器与 Operator、调度器扩展、Structured Logging、Metrics/Tracing
 - 📫 找工作：云原生工程师 / 架构师方向，**Open to new opportunity**
-
-**12 年一直在云原生这条线上做深**：搜狗（运维开发 → 容器平台从 0 到 1，技术负责人）→ 旷视 Face++（高级运维开发，阿里云 K8s 从 0 搭建）→ 小米（弹性调度组 K8s 架构师 / 技术 leader，2020.10 至今）。代表成果：竞价实例方案让集群整体成本下降约 30%；容器平台做到多地近 1000 节点、上万 Pod、QPS 百万级。
 
 </details>
 
