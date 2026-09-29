@@ -97,8 +97,8 @@ README 里 `## 🧠 AI Infra`、`## 🤖 AI Agent`、`## 🎯 面试准备` 三�
 
 | 变量 | 默认 | 说明 |
 | --- | --- | --- |
-| `MAX_COMMITS` | 5 | 展示的 commit 条数 |
-| `MAX_PRS` | 5 | 展示的 PR 条数 |
+| `MAX_COMMITS` | 5 | 展示的 commit 条数（**README 里若没有 `commits` 占位符，则整段跳过不拉数据**） |
+| `MAX_PRS` | 10 | 展示的 PR 条数（同上，无 `prs` 占位符则跳过） |
 | `MAX_POSTS` | 5 | 展示的文章条数 |
 | `SKIP_PATTERNS` | `Add files via upload,Initial commit` | commit 标题命中前缀则跳过，避免刷屏 |
 | `MAX_VISIBLE` | 6 | 每个精选区块**直接展示**的条数，其余自动折叠进 `<details>` |
