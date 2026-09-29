@@ -7,7 +7,10 @@
 #   date   发布日期 YYYY-MM-DD（必填，用于倒序排序）
 #   source 来源标签，如 知乎 / LinkedIn / 公众号（可省略）
 #
-# 这里会比博客 RSS 优先展示，两者按日期混排。
+# 注意：知乎（RSS 已 403 反爬）和 LinkedIn（登录墙）都无法自动抓取，
+# 这两处的文章需要手动加到这里；博客 RSS 会自动混入，并按 URL 去重。
+#
+# 新增时照着下面格式加即可，顺序无所谓，脚本会按 date 倒序排。
 
 - title: Flannel 改 CNI 方式
   url: https://yuzhiquan.github.io/2021/03/03/flannel-to-cni/
@@ -18,3 +21,15 @@
   url: https://yuzhiquan.github.io/2020/12/14/go-mem/
   date: 2020-12-20
   source: Blog
+
+# 待补充：知乎文章（https://www.zhihu.com/people/hanniba）
+# - title: 标题
+#   url: https://zhuanlan.zhihu.com/p/xxxxx
+#   date: 2026-08-12
+#   source: 知乎
+
+# 待补充：LinkedIn 文章（https://www.linkedin.com/in/zhiquan-yu-7a701b97/）
+# - title: 标题
+#   url: https://www.linkedin.com/pulse/xxxxx
+#   date: 2026-07-01
+#   source: LinkedIn

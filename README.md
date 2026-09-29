@@ -4,7 +4,7 @@
 
 **Cloud Native Engineer / 容器 PaaS · Go · Kubernetes**
 
-📍 Beijing, China · 🌐 [Blog](https://yuzhiquan.github.io) · 🐦 [@ZhiquanYu](https://twitter.com/ZhiquanYu)
+📍 Beijing, China · 🌐 [Blog](https://yuzhiquan.github.io) · 📖 [知乎](https://www.zhihu.com/people/hanniba) · 💼 [LinkedIn](https://www.linkedin.com/in/zhiquan-yu-7a701b97/) · 🐦 [@ZhiquanYu](https://twitter.com/ZhiquanYu)
 
 </div>
 
@@ -45,11 +45,11 @@
 ## 🚀 Recent commits
 
 <!--START_SECTION:commits-->
+- [`6c9a4c2`](https://github.com/yuzhiquan/yuzhiquan/commit/6c9a4c2a726b4faed8ef7a9ac901d4fff46184b8) feat: writing section from articles.yml (zhihu/linkedin friendly) · `yuzhiquan/yuzhiquan`
 - [`8f6181d`](https://github.com/yuzhiquan/yuzhiquan/commit/8f6181da5a2e55491053fd27245eb6486d92170e) feat: add scheduled workflow to refresh recent commits, PRs and posts · `yuzhiquan/yuzhiquan`
 - [`f01afb9`](https://github.com/kubernetes-sigs/agent-sandbox/commit/f01afb95fd1fcd6c03507fded29f420fc3c1a406) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox`
 - [`10a7f4e`](https://github.com/kubernetes-sigs/agent-sandbox/commit/10a7f4ebe08892a2c2e66c7047e1a9bb601dc040) feat(clients/ts): support automatic sandbox expiration (#1605) · `kubernetes-sigs/agent-sandbox`
 - [`3fbd2a5`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/3fbd2a527214c428c7feb207e071d54c26551de8) Fix a stale header comment that contradicted the rest of the file · `yuzhiquan/ray-vllm-on-kubernetes`
-- [`185aae3`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/185aae3e2f83455c7bd089e673cb8056db69c824) Add a GPU-free capacity checker · `yuzhiquan/ray-vllm-on-kubernetes`
 <!--END_SECTION:commits-->
 
 ## 🔀 Recent pull requests
@@ -72,7 +72,7 @@
 - [CAS5.x编译、部署(3)-登录页定制](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin3/) · 2019-01-21 · `Blog`
 <!--END_SECTION:writing-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:23 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 07:27 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
