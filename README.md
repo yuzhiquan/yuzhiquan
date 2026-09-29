@@ -1,63 +1,83 @@
-### Hi there 👋
+<div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%F0%9F%91%8B-blue.svg)](https://www.linkedin.com/in/zhiquan-yu-7a701b97/)
-[![ghpvc](https://komarev.com/ghpvc/?username=yuzhiquan)](https://komarev.com/ghpvc/?username=yuzhiquan)
+# Zhiquan Yu · Heisenberg
 
-<!--
-**yuzhiquan/yuzhiquan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Cloud Native Engineer / 容器 PaaS · Go · Kubernetes**
 
-Here are some ideas to get you started:
+📍 Beijing, China · 🌐 [Blog](https://yuzhiquan.github.io) · 🐦 [@ZhiquanYu](https://twitter.com/ZhiquanYu)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-- 🔭 I’m currently working on CloudNative | Container PaaS platform
-- 🌱 ~~**I’m open for new opportunity now, such as cloud native engineer or architect**~~
+</div>
 
-**🌈 Working with:**
+---
 
-<p align="left">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/>
-  <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
+## 👨‍💻 About me
 
+- 🔭 当前在做 **CloudNative / 容器 PaaS 平台**
+- 🌱 持续投入：**Kubernetes 调度与扩展、容器运行时、GPU 算力调度与隔离、云原生可观测性**
+- 👯 社区参与：`@kubernetes` / `@kubernetes-sigs` member，`sig-instrumentation`、`wg-structured-logging` reviewer
+- 💬 乐于交流：Go、K8s 控制器与 Operator、调度器扩展、Structured Logging、Metrics/Tracing
+- 📫 找工作：云原生工程师 / 架构师方向，**Open to new opportunity**
+
+## 🛠 Tech stack
+
+<p>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
+  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Containerd-575757?style=flat-square&logo=containerd&logoColor=white" alt="Containerd">
 </p>
 
-**🌈 Interested in:**
-<p align="left">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>
-</p>
+## 📊 GitHub stats
 
-**🌈 One more thing maybe:**
-<p align="left">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
-<img src="https://raw.githubusercontent.com/github/explore/7456fdff59816d37ef383a6c8f32a26ff7332db2/topics/django/django.png" alt="django" width="40" height="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg" alt="vuejs" width="40" height="40"/>
-</p>
+<div align="center">
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=yuzhiquan&show_icons=true&include_all_commits=true&hide_border=true&count_private=false" alt="GitHub stats">
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuzhiquan&layout=compact&hide_border=true&langs_count=6" alt="Top languages">
+</div>
 
-<!--
-<a href="https://github.com/yuzhiquan">
-  <img align="center" height="170px" src="https://github-readme-stats.vercel.app/api?username=yuzhiquan&show_icons=true&theme=buefy" />
-</a>
-<a href="https://github.com/yuzhiquan">
-  <img align="center" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuzhiquan&layout=compact&show_icons=true&theme=buefy" />
-</a>
+<div align="center">
+  <img height="150" src="https://github-readme-streak-stats.herokuapp.com/?user=yuzhiquan&hide_border=true" alt="Commit streak">
+  <img height="150" src="https://github-readme-activity-graph.vercel.app/graph?username=yuzhiquan&hide_border=true&bg_color=ffffff&color=326CE5&line=326CE5&point=326CE5&area=true" alt="Contribution graph">
+</div>
 
-<img src="https://github-profile-trophy.vercel.app/?username=yuzhiquan&theme=flat&column=7&margin-w=10" alt="logo" height="160" align="center" />
--->
+## 🚀 Recent commits
 
+<!--START_SECTION:commits-->
+- [`f01afb9`](https://github.com/kubernetes-sigs/agent-sandbox/commit/f01afb95fd1fcd6c03507fded29f420fc3c1a406) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox`
+- [`10a7f4e`](https://github.com/kubernetes-sigs/agent-sandbox/commit/10a7f4ebe08892a2c2e66c7047e1a9bb601dc040) feat(clients/ts): support automatic sandbox expiration (#1605) · `kubernetes-sigs/agent-sandbox`
+- [`3fbd2a5`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/3fbd2a527214c428c7feb207e071d54c26551de8) Fix a stale header comment that contradicted the rest of the file · `yuzhiquan/ray-vllm-on-kubernetes`
+- [`185aae3`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/185aae3e2f83455c7bd089e673cb8056db69c824) Add a GPU-free capacity checker · `yuzhiquan/ray-vllm-on-kubernetes`
+- [`7a1ac6f`](https://github.com/yuzhiquan/ray-vllm-on-kubernetes/commit/7a1ac6f6001cbddd2d3029b51e89d3e62ba93792) Scope this repository to code and manifests only · `yuzhiquan/ray-vllm-on-kubernetes`
+<!--END_SECTION:commits-->
 
-[![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/vue/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
-[![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/vue/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/vue/2-most-commit-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
-[![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/vue/3-stats.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/yuzhiquan/summary/master/profile-summary-card-output/vue/4-productive-time.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+## 🔀 Recent pull requests
 
+<!--START_SECTION:prs-->
+- [#1439](https://github.com/kubernetes-sigs/agent-sandbox/pull/1439) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox` · _merged_
+- [#140308](https://github.com/kubernetes/kubernetes/pull/140308) scheduler: fix empty-string topology domain in TAS conflict check · `kubernetes/kubernetes` · _open_
+- [#1605](https://github.com/kubernetes-sigs/agent-sandbox/pull/1605) feat(clients/ts): support automatic sandbox expiration · `kubernetes-sigs/agent-sandbox` · _merged_
+- [#140143](https://github.com/kubernetes/kubernetes/pull/140143) scheduler: add podgroup_cache_missed_events_total metric · `kubernetes/kubernetes` · _closed_
+- [#1339](https://github.com/kubernetes-sigs/agent-sandbox/pull/1339) feat(mcp): add /healthz and /readyz probe endpoints · `kubernetes-sigs/agent-sandbox` · _merged_
+<!--END_SECTION:prs-->
 
+## 📝 Latest posts
 
+<!--START_SECTION:posts-->
+- [Flannel改CNI方式](https://yuzhiquan.github.io/2021/03/03/flannel-to-cni/) · 2021-03-03
+- [go内存逃逸](https://yuzhiquan.github.io/2020/12/14/go-mem/) · 2019-12-20
+- [CAS5.x编译、部署(1)-LDAP支持](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin/) · 2019-01-21
+- [Docker基础](https://yuzhiquan.github.io/2020/12/14/Docker%20%E5%9F%BA%E7%A1%80/) · 2020-08-04
+- [CAS5.x编译、部署(3)-登录页定制](https://yuzhiquan.github.io/2020/12/14/CAS-compile-plugin3/) · 2019-01-21
+<!--END_SECTION:posts-->
 
+<sub>Last updated: <!--START_SECTION:updated-->2026-09-29 06:29 UTC<!--END_SECTION:updated--></sub>
+
+---
+
+<div align="center">
+
+<sub>本页动态区块由 GitHub Actions 每 30 分钟自动更新 · 源码见 <a href=".github/workflows/update-readme.yml">workflow</a></sub>
+
+</div>
