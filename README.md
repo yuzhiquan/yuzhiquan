@@ -86,8 +86,8 @@
 ## 🔀 Recent pull requests
 
 <!--START_SECTION:prs-->
-- [#1439](https://github.com/kubernetes-sigs/agent-sandbox/pull/1439) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#140308](https://github.com/kubernetes/kubernetes/pull/140308) scheduler: fix empty-string topology domain in TAS conflict check · `kubernetes/kubernetes` · _open_
+- [#1439](https://github.com/kubernetes-sigs/agent-sandbox/pull/1439) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#1605](https://github.com/kubernetes-sigs/agent-sandbox/pull/1605) feat(clients/ts): support automatic sandbox expiration · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#140143](https://github.com/kubernetes/kubernetes/pull/140143) scheduler: add podgroup_cache_missed_events_total metric · `kubernetes/kubernetes` · _closed_
 - [#1339](https://github.com/kubernetes-sigs/agent-sandbox/pull/1339) feat(mcp): add /healthz and /readyz probe endpoints · `kubernetes-sigs/agent-sandbox` · _merged_
@@ -205,7 +205,7 @@
 </details>
 <!--END_SECTION:interview-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-10-09 08:14 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-10-09 15:25 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
