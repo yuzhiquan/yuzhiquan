@@ -86,7 +86,7 @@
 ## 🔀 Recent pull requests
 
 <!--START_SECTION:prs-->
-- [#140308](https://github.com/kubernetes/kubernetes/pull/140308) scheduler: treat empty topology label value as invalid TAS domain · `kubernetes/kubernetes` · _open_
+- [#140308](https://github.com/kubernetes/kubernetes/pull/140308) scheduler: treat empty topology label value as invalid TAS domain · `kubernetes/kubernetes` · _merged_
 - [#140097](https://github.com/kubernetes/kubernetes/pull/140097) WIP: test/integration/dra: add gang+DRA allocation conflict reproducer · `kubernetes/kubernetes` · _open_
 - [#1439](https://github.com/kubernetes-sigs/agent-sandbox/pull/1439) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#1605](https://github.com/kubernetes-sigs/agent-sandbox/pull/1605) feat(clients/ts): support automatic sandbox expiration · `kubernetes-sigs/agent-sandbox` · _merged_
@@ -205,7 +205,7 @@
 </details>
 <!--END_SECTION:interview-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-10-20 15:30 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-10-20 19:31 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
