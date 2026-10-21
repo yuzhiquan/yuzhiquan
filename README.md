@@ -86,6 +86,7 @@
 ## 🔀 Recent pull requests
 
 <!--START_SECTION:prs-->
+- [#139923](https://github.com/kubernetes/kubernetes/pull/139923) Degrade gracefully when etcd Maintenance.Status is PermissionDenied · `kubernetes/kubernetes` · _open_
 - [#140308](https://github.com/kubernetes/kubernetes/pull/140308) scheduler: treat empty topology label value as invalid TAS domain · `kubernetes/kubernetes` · _merged_
 - [#140097](https://github.com/kubernetes/kubernetes/pull/140097) WIP: test/integration/dra: add gang+DRA allocation conflict reproducer · `kubernetes/kubernetes` · _open_
 - [#1439](https://github.com/kubernetes-sigs/agent-sandbox/pull/1439) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox` · _merged_
@@ -95,7 +96,6 @@
 - [#1329](https://github.com/kubernetes-sigs/agent-sandbox/pull/1329) feat(mcp): add list_files and file_exists tools · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#1291](https://github.com/kubernetes-sigs/agent-sandbox/pull/1291) feat(api): mirror backing pod's PodScheduled condition into Sandbox stat... · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#1290](https://github.com/kubernetes-sigs/agent-sandbox/pull/1290) feat(warmpool): configurable readiness grace period and unschedulable re... · `kubernetes-sigs/agent-sandbox` · _merged_
-- [#6529](https://github.com/kubernetes/org/pull/6529) Add yuzhiquan to kubernetes-sigs org · `kubernetes/org` · _merged_
 <!--END_SECTION:prs-->
 
 ## 🧠 AI Infra
@@ -205,7 +205,7 @@
 </details>
 <!--END_SECTION:interview-->
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-10-20 22:50 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-10-21 01:09 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
