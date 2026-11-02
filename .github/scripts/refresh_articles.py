@@ -52,6 +52,8 @@ SOURCES = {
          "dir": "beginner-series", "label": "入门系列", "pick": "zh"},
         {"repo": "yuzhiquan/ai-infra-book-analysis", "branch": "main",
          "dir": "blogs", "label": "博客", "pick": "zh"},
+        {"repo": "yuzhiquan/AI-INFRA", "branch": "main",
+         "dir": "", "label": "AI Infra", "pick": "zh"},
     ],
     "ai-agent": [
         {"repo": "yuzhiquan/MiniAgent-tutorial", "branch": "main", "dir": "",
