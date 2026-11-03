@@ -12,11 +12,11 @@
 
 ## 👨‍💻 About me
 
+- 📫 Open to new opportunities: cloud-native engineer / architect roles
 - 🔭 Currently building **container PaaS platforms / cluster-wide Service Mesh rollout / multi-cloud infrastructure**
 - 🌱 Focused on: **Kubernetes scheduling & elasticity, Service Mesh & multi-cluster, container networking, GPU scheduling & isolation, cloud-native observability**
 - 👯 Community: member of `@kubernetes` / `@kubernetes-sigs`, reviewer in `sig-instrumentation` and `wg-structured-logging`
 - 💬 Happy to talk about: Go, K8s controllers & Operators, scheduler extensions, structured logging, metrics/tracing
-- 📫 Open to new opportunities: cloud-native engineer / architect roles
 
 <details>
 <summary><b>🇨🇳 中文简介 · 点击展开</b></summary>
