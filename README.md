@@ -100,7 +100,7 @@
 
 ## 🧠 AI Infra
 
-<sub>📦 [ai-infra-book-analysis](https://github.com/yuzhiquan/ai-infra-book-analysis/tree/main/beginner-series) · [beginner-series](https://github.com/yuzhiquan/ai-infra-book-analysis/tree/main/beginner-series) + [blogs](https://github.com/yuzhiquan/ai-infra-book-analysis/tree/main/blogs) 🔒</sub>
+<sub>📦 [ai-infra-book-analysis](https://github.com/yuzhiquan/ai-infra-book-analysis/tree/main/beginner-series) · [beginner-series](https://github.com/yuzhiquan/ai-infra-book-analysis/tree/main/beginner-series) + [blogs](https://github.com/yuzhiquan/ai-infra-book-analysis/tree/main/blogs) 🔒 · [AI-INFRA](https://github.com/yuzhiquan/AI-INFRA)</sub>
 
 <!--START_SECTION:aiinfra-->
 - [在 Kubernetes 上跑通大模型训练与推理（面向初学者）](https://github.com/yuzhiquan/ai-infra-book-analysis/blob/main/beginner-series/README.md) · 2026-09-16 · `入门系列`
