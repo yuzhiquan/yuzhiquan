@@ -163,11 +163,32 @@
 <sub>📦 [llm-starter](https://github.com/yuzhiquan/llm-starter)</sub>
 
 <!--START_SECTION:llm-->
-_暂无文章_
+- [从零开始理解大模型（一）：一切从“猜下一个词”开始](https://github.com/yuzhiquan/llm-starter/blob/main/llm-01-next-token.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（二）：Token——大模型眼中的“字”长什么样](https://github.com/yuzhiquan/llm-starter/blob/main/llm-02-token.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（三）：向量与 Embedding——把文字变成数学](https://github.com/yuzhiquan/llm-starter/blob/main/llm-03-embedding.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（四）：Attention——大模型的“阅读理解”机制](https://github.com/yuzhiquan/llm-starter/blob/main/llm-04-attention.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（五）：Transformer 全景——积木怎么搭成大厦](https://github.com/yuzhiquan/llm-starter/blob/main/llm-05-transformer.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（六）：训练——70 亿个参数是怎么“学”出来的](https://github.com/yuzhiquan/llm-starter/blob/main/llm-06-training.md) · 2026-11-03 · `从零理解大模型`
+
+<details>
+<summary><b>📂 展开其余 10 篇</b>（共 16 篇）</summary>
+
+- [从零开始理解大模型（七）：推理——你按下回车后的这一秒发生了什么](https://github.com/yuzhiquan/llm-starter/blob/main/llm-07-inference.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（八）：上下文窗口——大模型的“工作记忆”到底有多大？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-08-context-window.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（九）：Scaling Law——为什么“大力出奇迹”有效](https://github.com/yuzhiquan/llm-starter/blob/main/llm-09-scaling-law.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（十）：从大模型到 Agent——下一个词预测如何长出手脚](https://github.com/yuzhiquan/llm-starter/blob/main/llm-10-agent.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（番外篇）：多模态——大模型是怎么“看懂”图片的](https://github.com/yuzhiquan/llm-starter/blob/main/llm-11-multimodal.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（番外篇二）：为什么大模型离不开 GPU](https://github.com/yuzhiquan/llm-starter/blob/main/llm-12-gpu.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（番外篇三）：为什么用 Token 计费？为什么输出比输入贵？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-13-token-pricing.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（番外篇四）：思考模式和非思考模式到底有什么区别？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-14-thinking-mode.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（番外篇五）：DeepSeek V4 Pro 总参数 1.6T，激活参数 49B——这到底是什么意思？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-15-moe.md) · 2026-11-03 · `从零理解大模型`
+- [从零开始理解大模型（番外篇六）：什么是算子？大模型里的“最小施工单位”](https://github.com/yuzhiquan/llm-starter/blob/main/llm-16-operators.md) · 2026-11-03 · `从零理解大模型`
+
+</details>
 <!--END_SECTION:llm-->
 
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-11-03 12:31 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-11-03 16:49 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
