@@ -160,7 +160,7 @@
 
 ## 🧩 LLM
 
-<sub>📦 [llm-starter](https://github.com/yuzhiquan/llm-starter)</sub>
+<sub>📦 [llm-starter · 精读笔记](https://github.com/yuzhiquan/llm-starter/tree/main/精读笔记)</sub>
 
 <!--START_SECTION:llm-->
 - [从零开始理解大模型（一）：一切从“猜下一个词”开始](https://github.com/yuzhiquan/llm-starter/blob/main/llm-01-next-token.md) · 2026-11-03 · `从零理解大模型`

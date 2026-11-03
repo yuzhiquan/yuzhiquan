@@ -62,8 +62,8 @@ SOURCES = {
          "label": "从零实现"},
     ],
     "llm": [
-        {"repo": "yuzhiquan/llm-starter", "branch": "main", "dir": "",
-         "label": "从零理解大模型", "exclude": ["精读笔记/", "script/", "README.md"]},
+        {"repo": "yuzhiquan/llm-starter", "branch": "main", "dir": "精读笔记",
+         "label": "精读笔记", "exclude": ["README.md"]},
     ],
 }
 
