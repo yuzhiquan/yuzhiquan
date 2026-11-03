@@ -163,32 +163,32 @@
 <sub>📦 [llm-starter · 精读笔记](https://github.com/yuzhiquan/llm-starter/tree/main/精读笔记)</sub>
 
 <!--START_SECTION:llm-->
-- [从零开始理解大模型（一）：一切从“猜下一个词”开始](https://github.com/yuzhiquan/llm-starter/blob/main/llm-01-next-token.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（二）：Token——大模型眼中的“字”长什么样](https://github.com/yuzhiquan/llm-starter/blob/main/llm-02-token.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（三）：向量与 Embedding——把文字变成数学](https://github.com/yuzhiquan/llm-starter/blob/main/llm-03-embedding.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（四）：Attention——大模型的“阅读理解”机制](https://github.com/yuzhiquan/llm-starter/blob/main/llm-04-attention.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（五）：Transformer 全景——积木怎么搭成大厦](https://github.com/yuzhiquan/llm-starter/blob/main/llm-05-transformer.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（六）：训练——70 亿个参数是怎么“学”出来的](https://github.com/yuzhiquan/llm-starter/blob/main/llm-06-training.md) · 2026-11-03 · `从零理解大模型`
+- [第 1 篇精读｜猜下一个词](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/01-%E7%8C%9C%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%AF%8D.md) · 2026-11-03 · `精读笔记`
+- [第 2 篇精读｜Token——大模型眼中的"字"长什么样](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/02-Token.md) · 2026-11-03 · `精读笔记`
+- [第 3 篇精读｜Embedding——把文字变成数学](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/03-Embedding.md) · 2026-11-03 · `精读笔记`
+- [第 4 篇精读｜Attention —— 大模型的「阅读理解」机制](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/04-Attention.md) · 2026-11-03 · `精读笔记`
+- [第 5 篇精读｜Transformer 全景：积木怎么搭成大厦](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/05-Transformer.md) · 2026-11-03 · `精读笔记`
+- [第 6 篇精读｜训练：70 亿个参数是怎么"学"出来的](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/06-%E8%AE%AD%E7%BB%83.md) · 2026-11-03 · `精读笔记`
 
 <details>
 <summary><b>📂 展开其余 10 篇</b>（共 16 篇）</summary>
 
-- [从零开始理解大模型（七）：推理——你按下回车后的这一秒发生了什么](https://github.com/yuzhiquan/llm-starter/blob/main/llm-07-inference.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（八）：上下文窗口——大模型的“工作记忆”到底有多大？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-08-context-window.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（九）：Scaling Law——为什么“大力出奇迹”有效](https://github.com/yuzhiquan/llm-starter/blob/main/llm-09-scaling-law.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（十）：从大模型到 Agent——下一个词预测如何长出手脚](https://github.com/yuzhiquan/llm-starter/blob/main/llm-10-agent.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（番外篇）：多模态——大模型是怎么“看懂”图片的](https://github.com/yuzhiquan/llm-starter/blob/main/llm-11-multimodal.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（番外篇二）：为什么大模型离不开 GPU](https://github.com/yuzhiquan/llm-starter/blob/main/llm-12-gpu.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（番外篇三）：为什么用 Token 计费？为什么输出比输入贵？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-13-token-pricing.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（番外篇四）：思考模式和非思考模式到底有什么区别？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-14-thinking-mode.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（番外篇五）：DeepSeek V4 Pro 总参数 1.6T，激活参数 49B——这到底是什么意思？](https://github.com/yuzhiquan/llm-starter/blob/main/llm-15-moe.md) · 2026-11-03 · `从零理解大模型`
-- [从零开始理解大模型（番外篇六）：什么是算子？大模型里的“最小施工单位”](https://github.com/yuzhiquan/llm-starter/blob/main/llm-16-operators.md) · 2026-11-03 · `从零理解大模型`
+- [第 7 篇精读｜推理与 KV Cache：按下回车后的这一秒](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/07-%E6%8E%A8%E7%90%86%E4%B8%8EKV-Cache.md) · 2026-11-03 · `精读笔记`
+- [第 8 篇精读｜上下文窗口——大模型的"工作记忆"到底有多大？](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/08-%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3.md) · 2026-11-03 · `精读笔记`
+- [第 9 篇精读｜Scaling Law——为什么"大力出奇迹"有效](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/09-Scaling-Law.md) · 2026-11-03 · `精读笔记`
+- [第 10 篇精读｜从大模型到 Agent——下一个词预测如何长出手脚](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/10-Agent.md) · 2026-11-03 · `精读笔记`
+- [第 11 篇精读｜多模态：大模型是怎么“看懂”图片的](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/11-%E5%A4%9A%E6%A8%A1%E6%80%81.md) · 2026-11-03 · `精读笔记`
+- [第 12 篇精读｜GPU：为什么大模型离不开它](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/12-GPU.md) · 2026-11-03 · `精读笔记`
+- [第 13 篇精读｜Token 计费：为什么输出比输入贵](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/13-Token%E8%AE%A1%E8%B4%B9.md) · 2026-11-03 · `精读笔记`
+- [第 14 篇精读｜思考模式：模型只是先给自己打了份草稿](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/14-%E6%80%9D%E8%80%83%E6%A8%A1%E5%BC%8F.md) · 2026-11-03 · `精读笔记`
+- [第 15 篇精读｜MoE：把"知道多少"和"算得多快"拆开卖](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/15-MoE.md) · 2026-11-03 · `精读笔记`
+- [第 16 篇精读｜算子：大模型最小的施工单位和最大的隐藏成本](https://github.com/yuzhiquan/llm-starter/blob/main/%E7%B2%BE%E8%AF%BB%E7%AC%94%E8%AE%B0/16-%E7%AE%97%E5%AD%90.md) · 2026-11-03 · `精读笔记`
 
 </details>
 <!--END_SECTION:llm-->
 
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-11-03 16:49 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-11-03 16:58 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
