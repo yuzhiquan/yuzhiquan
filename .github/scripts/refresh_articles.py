@@ -61,13 +61,9 @@ SOURCES = {
         {"repo": "yuzhiquan/agent-from-scratch", "branch": "main", "dir": "",
          "label": "从零实现"},
     ],
-    "interview": [
-        {"repo": "yuzhiquan/tech-review-notes", "branch": "main", "dir": "",
-         "label": "GPU 调度"},
-        {"repo": "yuzhiquan/havesomefun", "branch": "master", "dir": "",
-         "label": "算法手册",
-         "exclude": ["README.md", "havesomefun-仓库分析报告.md", "21天日程表.md",
-                     "恢复计划.md"]},
+    "llm": [
+        {"repo": "yuzhiquan/llm-starter", "branch": "main", "dir": "",
+         "label": "从零理解大模型", "exclude": ["精读笔记/", "script/", "README.md"]},
     ],
 }
 

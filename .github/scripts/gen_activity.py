@@ -5,7 +5,7 @@
     <!--START_SECTION:prs-->       ... <!--END_SECTION:prs-->
     <!--START_SECTION:aiinfra-->   ... <!--END_SECTION:aiinfra-->     AI Infra
     <!--START_SECTION:aiagent-->   ... <!--END_SECTION:aiagent-->     AI Agent
-    <!--START_SECTION:interview--> ... <!--END_SECTION:interview-->   面试准备
+    <!--START_SECTION:llm-->       ... <!--END_SECTION:llm-->         LLM
     <!--START_SECTION:updated-->   ... <!--END_SECTION:updated-->
 
 数据源说明：
@@ -13,7 +13,7 @@
     因此最近 commit 改用 /search/commits（按 committer-date 排序）；
   - 最近 PR 用 /search/issues?q=...type:pr（覆盖所有仓库，比 events 更全）；
   - 两者失败时自动回退到 events（PushEvent 生成 compare 链接、PullRequestEvent 生成 PR 链接）；
-  - 文章 = data/articles.yml（按 ai-infra / ai-agent / interview 三个分组手动维护），
+  - 文章 = data/articles.yml（按 ai-infra / ai-agent / llm 三个分组手动维护），
     每组按日期倒序，默认展示最新 MAX_VISIBLE 篇，其余折叠进 <details>。
     知乎和 LinkedIn 没有可用 RSS，外部文章只能往 articles.yml 里加。
 """
@@ -351,7 +351,7 @@ def main():
     groups = load_articles(ARTICLES_FILE)
     # 分组名 -> README 占位符名
     section_of = {"ai-infra": "aiinfra", "ai-agent": "aiagent",
-                  "interview": "interview", "writing": "writing"}
+                  "llm": "llm", "writing": "writing"}
     rendered = {}
     for group, rows in groups.items():
         name = section_of.get(group, group)
