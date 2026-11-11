@@ -86,6 +86,7 @@
 ## 🔀 Recent pull requests
 
 <!--START_SECTION:prs-->
+- [#2282](https://github.com/dsx-ai-factory/nvke/pull/2282) fix(e2e): reject two dsx sites that share an api endpoint · `dsx-ai-factory/nvke` · _open_
 - [#2136](https://github.com/kubernetes-sigs/agent-sandbox/pull/2136) feat(warmpool): per-pool readiness grace period override · `kubernetes-sigs/agent-sandbox` · _open_
 - [#2137](https://github.com/kubernetes-sigs/agent-sandbox/pull/2137) docs(agents): require roadmap updates in the PR that changes a roadmap f... · `kubernetes-sigs/agent-sandbox` · _open_
 - [#139923](https://github.com/kubernetes/kubernetes/pull/139923) Degrade gracefully when etcd Maintenance.Status is PermissionDenied · `kubernetes/kubernetes` · _open_
@@ -95,7 +96,6 @@
 - [#1605](https://github.com/kubernetes-sigs/agent-sandbox/pull/1605) feat(clients/ts): support automatic sandbox expiration · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#140143](https://github.com/kubernetes/kubernetes/pull/140143) scheduler: add podgroup_cache_missed_events_total metric · `kubernetes/kubernetes` · _closed_
 - [#1339](https://github.com/kubernetes-sigs/agent-sandbox/pull/1339) feat(mcp): add /healthz and /readyz probe endpoints · `kubernetes-sigs/agent-sandbox` · _merged_
-- [#1329](https://github.com/kubernetes-sigs/agent-sandbox/pull/1329) feat(mcp): add list_files and file_exists tools · `kubernetes-sigs/agent-sandbox` · _merged_
 <!--END_SECTION:prs-->
 
 ## 🧠 AI Infra
@@ -188,7 +188,7 @@
 <!--END_SECTION:llm-->
 
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-11-11 01:37 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-11-11 08:40 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
