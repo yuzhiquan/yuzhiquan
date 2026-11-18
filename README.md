@@ -86,16 +86,16 @@
 ## 🔀 Recent pull requests
 
 <!--START_SECTION:prs-->
+- [#2330](https://github.com/kubernetes-sigs/agent-sandbox/pull/2330) fix(warmpool): back off when replacing stuck members does not help · `kubernetes-sigs/agent-sandbox` · _open_
+- [#140097](https://github.com/kubernetes/kubernetes/pull/140097) WIP: test/integration/dra: add gang+DRA allocation conflict reproducer · `kubernetes/kubernetes` · _open_
 - [#2137](https://github.com/kubernetes-sigs/agent-sandbox/pull/2137) docs(agents): require roadmap updates in the PR that changes a roadmap f... · `kubernetes-sigs/agent-sandbox` · _open_
 - [#2136](https://github.com/kubernetes-sigs/agent-sandbox/pull/2136) feat(warmpool): per-pool readiness grace period override · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#144237](https://github.com/kubernetes/kubernetes/pull/144237) kubelet: keep running pods using device plugin resources via overhead af... · `kubernetes/kubernetes` · _open_
 - [#2282](https://github.com/dsx-ai-factory/nvke/pull/2282) fix(e2e): reject two dsx sites that share an api endpoint · `dsx-ai-factory/nvke` · _open_
 - [#139923](https://github.com/kubernetes/kubernetes/pull/139923) Degrade gracefully when etcd Maintenance.Status is PermissionDenied · `kubernetes/kubernetes` · _open_
 - [#140308](https://github.com/kubernetes/kubernetes/pull/140308) scheduler: treat empty topology label value as invalid TAS domain · `kubernetes/kubernetes` · _merged_
-- [#140097](https://github.com/kubernetes/kubernetes/pull/140097) WIP: test/integration/dra: add gang+DRA allocation conflict reproducer · `kubernetes/kubernetes` · _open_
 - [#1439](https://github.com/kubernetes-sigs/agent-sandbox/pull/1439) refactor(warmpool): read mirrored PodScheduled instead of fetching the P... · `kubernetes-sigs/agent-sandbox` · _merged_
 - [#1605](https://github.com/kubernetes-sigs/agent-sandbox/pull/1605) feat(clients/ts): support automatic sandbox expiration · `kubernetes-sigs/agent-sandbox` · _merged_
-- [#140143](https://github.com/kubernetes/kubernetes/pull/140143) scheduler: add podgroup_cache_missed_events_total metric · `kubernetes/kubernetes` · _closed_
 <!--END_SECTION:prs-->
 
 ## 🧠 AI Infra
@@ -188,7 +188,7 @@
 <!--END_SECTION:llm-->
 
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-11-18 01:04 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-11-18 08:44 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
