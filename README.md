@@ -86,8 +86,8 @@
 ## 🔀 Recent pull requests
 
 <!--START_SECTION:prs-->
+- [#2411](https://github.com/kubernetes-sigs/agent-sandbox/pull/2411) fix(openhands): declare authlib, which openhands-sdk imports · `kubernetes-sigs/agent-sandbox` · _closed_
 - [#2330](https://github.com/kubernetes-sigs/agent-sandbox/pull/2330) fix(warmpool): back off when replacing stuck members does not help · `kubernetes-sigs/agent-sandbox` · _open_
-- [#2411](https://github.com/kubernetes-sigs/agent-sandbox/pull/2411) fix(openhands): declare authlib, which openhands-sdk imports · `kubernetes-sigs/agent-sandbox` · _open_
 - [#140097](https://github.com/kubernetes/kubernetes/pull/140097) WIP: test/integration/dra: add gang+DRA allocation conflict reproducer · `kubernetes/kubernetes` · _open_
 - [#2137](https://github.com/kubernetes-sigs/agent-sandbox/pull/2137) docs(agents): require roadmap updates in the PR that changes a roadmap f... · `kubernetes-sigs/agent-sandbox` · _open_
 - [#2136](https://github.com/kubernetes-sigs/agent-sandbox/pull/2136) feat(warmpool): per-pool readiness grace period override · `kubernetes-sigs/agent-sandbox` · _merged_
@@ -188,7 +188,7 @@
 <!--END_SECTION:llm-->
 
 
-<sub>Last updated: <!--START_SECTION:updated-->2026-11-27 00:12 UTC<!--END_SECTION:updated--></sub>
+<sub>Last updated: <!--START_SECTION:updated-->2026-11-27 08:52 UTC<!--END_SECTION:updated--></sub>
 
 ---
 
